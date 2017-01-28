@@ -1,0 +1,135 @@
+body {
+   margin: 0;
+   height: 100vh;
+   background: url("../img/background.jpg");
+   background-size: cover;
+   background-attachment: fixed;
+}
+
+.main-info {
+   position: relative;
+   top: -20vh;
+   font-size: 5vh;
+   color: white;
+
+   display: -webkit-box;
+   display: -ms-flexbox;
+   display: flex;
+   -webkit-box-orient: horizontal;
+   -webkit-box-direction: normal;
+   -ms-flex-direction: row;
+   flex-direction: row;
+   -webkit-box-pack: center;
+   -ms-flex-pack: center;
+   justify-content: center;
+
+   -webkit-animation: main-info 1s linear;
+   animation: main-info 1s linear;
+   -webkit-animation-fill-mode:forwards;
+   animation-fill-mode:forwards;
+   -webkit-animation-delay: 0.5s;
+   animation-delay: 0.5s;
+}
+
+@-webkit-keyframes main-info{
+   to{
+      -webkit-transform: translate(0,40vh);
+      -moz-transform: translate(0,40vh);
+      -o-transform: translate(0,40vh);
+   }
+}
+
+@keyframes main-info{
+   to{
+      -webkit-transform: translate(0,40vh);
+      -moz-transform: translate(0,40vh);
+      -o-transform: translate(0,40vh);
+   }
+}
+
+.name{
+   font-size: 13vh;
+}
+
+.develop{
+   position: relative;
+   left: -43vh;
+
+   display: -webkit-box;
+   display: -ms-flexbox;
+   display: flex;
+   -webkit-box-orient: vertical;
+   -webkit-box-direction: normal;
+   -ms-flex-direction: column;
+   flex-direction: column;
+   -webkit-box-pack: center;
+   -ms-flex-pack: center;
+   justify-content: center;
+
+   animation: opacity 2.5s linear;
+   -webkit-animation: develop;
+   animation: develop 1.5s linear 0.8s, opacity 2s ease-out;
+   -webkit-animation-fill-mode:forwards;
+   animation-fill-mode:forwards;
+}
+
+@-webkit-keyframes develop{
+   0%{
+      -webkit-transform: translate(0,0);
+      -moz-transform: translate(0,0);
+      -o-transform: translate(0,0);
+   }
+   100%{
+      -webkit-transform: translate(43vh,0);
+      -moz-transform: translate(43vh,0);
+      -o-transform: translate(43vh,0);
+   }
+}
+
+@keyframes develop{
+   0%{
+      -webkit-transform: translate(0,0);
+      -moz-transform: translate(0,0);
+      -o-transform: translate(0,0);
+   }
+   100%{
+      -webkit-transform: translate(43vh,0);
+      -moz-transform: translate(43vh,0);
+      -o-transform: translate(43vh,0);
+   }
+}
+
+@-webkit-keyframes opacity{
+   0%{
+      opacity: 0;
+   }
+   80%{
+      opacity: 0;
+   }
+   90%{
+      opacity: 0.50;
+   }
+   100%{
+      opacity: 1;
+   }
+}
+
+@keyframes opacity{
+   0%{
+      opacity: 0;
+   }
+   80%{
+      opacity: 0;
+   }
+   90%{
+      opacity: 0.50;
+   }
+   100%{
+      opacity: 1;
+   }
+}
+
+.develop p{
+   text-indent: 10px;
+   margin: 0px;
+}
