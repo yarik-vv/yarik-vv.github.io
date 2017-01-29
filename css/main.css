@@ -141,9 +141,7 @@ body {
    left: 140vh;
 
    display: -webkit-box;
-
    display: -ms-flexbox;
-
    display: flex;
    -webkit-box-pack: center;
    -ms-flex-pack: center;
@@ -153,7 +151,6 @@ body {
    align-items: center;
 
    -webkit-animation: links 1.5s linear 0.8s, opacity 2s ease-out;
-
    animation: links 1.5s linear 0.8s, opacity 2s ease-out;
    -webkit-animation-fill-mode:forwards;
    animation-fill-mode:forwards;
@@ -187,21 +184,23 @@ body {
 
 .links a{
    margin: 1.3vh;
-}
-
-.links img{
-   height: 10vh;
-   width: 10vh;
-}
-/*
+   margin-top: 0;
+   margin-bottom: 0;
+   padding: 0;
+   text-indent: 0;
+   font-size: 10vh;
+   text-decoration: none;
    -webkit-transition: all 0.5s ease;
    transition: all 0.5s ease;
-
-.social img:hover{
-  -webkit-transform: rotate(360deg);
-  transform: translateY(10px) rotate(360deg);
 }
-*/
+
+.links a:hover{
+   display: block;
+   -webkit-transform: rotate(360deg);
+   transform: rotate(360deg);
+}
+
+
 
 .contacts{
    position: relative;
@@ -282,4 +281,39 @@ body {
 .socicon-mail{
    position: relative;
    top: 0.5vh;
+}
+
+.socicon-linkedin{
+   position: relative;
+   top: -1vh;
+   font-size: 12vh;
+   color: #00a0dc;
+}
+
+.socicon-github{
+   color: #6e5494;
+}
+
+.socicon-github:hover,
+.socicon-telegram:hover,
+.socicon-instagram:hover,
+.socicon-linkedin:hover{
+   font-size: 15vh;
+}
+
+.socicon-telegram{
+   color: rgba(0, 255, 51, 0.75);
+}
+
+.socicon-vkontakte{
+   position: relative;
+   top: 1.2vh;
+   font-size: 15vh;
+   color: rgba(255, 255, 0, 0.75);
+}
+
+.socicon-instagram{
+   position: relative;
+   top: 0.3vh;
+   color: #e1306c;
 }
