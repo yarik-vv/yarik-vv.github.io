@@ -1,3 +1,6 @@
+html{
+   overflow: hidden;
+}
 body {
    margin: 0;
    height: 100vh;
@@ -23,12 +26,10 @@ body {
    -ms-flex-pack: center;
    justify-content: center;
 
-   -webkit-animation: main-info 1s linear;
-   animation: main-info 1s linear;
+   -webkit-animation: main-info 1s linear 0.5s;
+   animation: main-info 1s linear 0.5s;
    -webkit-animation-fill-mode:forwards;
    animation-fill-mode:forwards;
-   -webkit-animation-delay: 0.5s;
-   animation-delay: 0.5s;
 }
 
 @-webkit-keyframes main-info{
@@ -66,7 +67,7 @@ body {
    -ms-flex-pack: center;
    justify-content: center;
 
-   animation: opacity 2.5s linear;
+/*   animation: opacity 2.5s linear;*/
    -webkit-animation: develop;
    animation: develop 1.5s linear 0.8s, opacity 2s ease-out;
    -webkit-animation-fill-mode:forwards;
@@ -134,10 +135,80 @@ body {
    margin: 0px;
 }
 
+.links{
+   position: relative;
+   top: 24vh;
+   left: 140vh;
+
+   display: -webkit-box;
+
+   display: -ms-flexbox;
+
+   display: flex;
+   -webkit-box-pack: center;
+   -ms-flex-pack: center;
+   justify-content: center;
+   -webkit-box-align: center;
+   -ms-flex-align: center;
+   align-items: center;
+
+   -webkit-animation: links 1.5s linear 0.8s, opacity 2s ease-out;
+
+   animation: links 1.5s linear 0.8s, opacity 2s ease-out;
+   -webkit-animation-fill-mode:forwards;
+   animation-fill-mode:forwards;
+}
+
+@-webkit-keyframes links{
+   0%{
+      -webkit-transform: translate(0,0);
+      -moz-transform: translate(0,0);
+      -o-transform: translate(0,0);
+   }
+   100%{
+      -webkit-transform: translate(-140vh,0);
+      -moz-transform: translate(-140vh,0);
+      -o-transform: translate(-140vh,0);
+   }
+}
+
+@keyframes links{
+   0%{
+      -webkit-transform: translate(0,0);
+      -moz-transform: translate(0,0);
+      -o-transform: translate(0,0);
+   }
+   100%{
+      -webkit-transform: translate(-140vh,0);
+      -moz-transform: translate(-140vh,0);
+      -o-transform: translate(-140vh,0);
+   }
+}
+
+.links a{
+   margin: 1.3vh;
+}
+
+.links img{
+   height: 10vh;
+   width: 10vh;
+}
+/*
+   -webkit-transition: all 0.5s ease;
+   transition: all 0.5s ease;
+
+.social img:hover{
+  -webkit-transform: rotate(360deg);
+  transform: translateY(10px) rotate(360deg);
+}
+*/
+
 .contacts{
    position: relative;
-   top: 20vh;
-/*   border: 1px solid black;*/
+   top: 70vh;
+   color: white;
+   font-size: 6vh;
+
    display: -webkit-box;
    display: -ms-flexbox;
    display: flex;
@@ -148,10 +219,31 @@ body {
    -webkit-box-pack: center;
    -ms-flex-pack: center;
    justify-content: center;
-   color: white;
-   font-size: 6vh;
+
+   -webkit-animation: contacts 1s linear 0.5s;
+
+   animation: contacts 1s linear 0.5s;
+   -webkit-animation-fill-mode:forwards;
+   animation-fill-mode:forwards;
 }
-.contacts li{
+
+@-webkit-keyframes contacts{
+   to{
+      -webkit-transform: translate(0,-43vh);
+      -moz-transform: translate(0,-43vh);
+      -o-transform: translate(0,-43vh);
+   }
+}
+
+@keyframes contacts{
+   to{
+      -webkit-transform: translate(0,-43vh);
+      -moz-transform: translate(0,-43vh);
+      -o-transform: translate(0,-43vh);
+   }
+}
+
+.contacts a{
    display: -webkit-box;
    display: -ms-flexbox;
    display: flex;
@@ -160,12 +252,14 @@ body {
    -ms-flex-direction: column;
    flex-direction: column;
    margin: 3vh;
+   text-decoration: none;
+   color: white;
 }
 
-.contacts li:hover{
+.contacts a:hover{
    color: black;
 }
-.contacts li div{
+.contacts a div{
    display: -webkit-box;
    display: -ms-flexbox;
    display: flex;
@@ -177,10 +271,10 @@ body {
    -ms-flex-pack: center;
    justify-content: center;
 }
-.contacts li p{
+.contacts a p{
    margin: 0px;
 }
-.contacts li div p{
+.contacts a div p{
    position: relative;
    text-indent: 1vh;
 }
