@@ -1,6 +1,7 @@
 html{
    overflow: hidden;
 }
+
 body {
    margin: 0;
    height: 100vh;
@@ -9,14 +10,15 @@ body {
    background-attachment: fixed;
 }
 
-.main-info {
+.main {
    position: relative;
    top: -20vh;
-   font-size: 5vh;
    color: white;
 
    display: -webkit-box;
+
    display: -ms-flexbox;
+
    display: flex;
    -webkit-box-orient: horizontal;
    -webkit-box-direction: normal;
@@ -26,13 +28,14 @@ body {
    -ms-flex-pack: center;
    justify-content: center;
 
-   -webkit-animation: main-info 1s linear 0.5s;
-   animation: main-info 1s linear 0.5s;
+   -webkit-animation: main 1s linear 0.5s;
+
+   animation: main 1s linear 0.5s;
    -webkit-animation-fill-mode:forwards;
    animation-fill-mode:forwards;
 }
 
-@-webkit-keyframes main-info{
+@-webkit-keyframes main{
    to{
       -webkit-transform: translate(0,40vh);
       -moz-transform: translate(0,40vh);
@@ -40,7 +43,7 @@ body {
    }
 }
 
-@keyframes main-info{
+@keyframes main{
    to{
       -webkit-transform: translate(0,40vh);
       -moz-transform: translate(0,40vh);
@@ -57,9 +60,12 @@ body {
    position: relative;
    left: -43vh;
    font-family: 'Bubbler One', sans-serif;
+   font-size: 5vh;
 
    display: -webkit-box;
+
    display: -ms-flexbox;
+
    display: flex;
    -webkit-box-orient: vertical;
    -webkit-box-direction: normal;
@@ -69,16 +75,18 @@ body {
    -ms-flex-pack: center;
    justify-content: center;
 
-/*   animation: opacity 2.5s linear;*/
-   -webkit-animation: develop;
+   -webkit-animation: develop 1.5s linear 0.8s, opacity 2s ease-out;
+
    animation: develop 1.5s linear 0.8s, opacity 2s ease-out;
    -webkit-animation-fill-mode:forwards;
    animation-fill-mode:forwards;
 }
+
 .develop p{
-   text-indent: 20px;
+   text-indent: 15px;
    margin: 0px;
 }
+
 .develop :nth-child(1){
    position: relative;
    top: 0.5vh;
@@ -89,12 +97,12 @@ body {
 }
 
 @-webkit-keyframes develop{
-   0%{
+   from{
       -webkit-transform: translate(0,0);
       -moz-transform: translate(0,0);
       -o-transform: translate(0,0);
    }
-   100%{
+   to{
       -webkit-transform: translate(43vh,0);
       -moz-transform: translate(43vh,0);
       -o-transform: translate(43vh,0);
@@ -102,12 +110,12 @@ body {
 }
 
 @keyframes develop{
-   0%{
+   from{
       -webkit-transform: translate(0,0);
       -moz-transform: translate(0,0);
       -o-transform: translate(0,0);
    }
-   100%{
+   to{
       -webkit-transform: translate(43vh,0);
       -moz-transform: translate(43vh,0);
       -o-transform: translate(43vh,0);
@@ -115,42 +123,29 @@ body {
 }
 
 @-webkit-keyframes opacity{
-   0%{
-      opacity: 0;
-   }
-   80%{
-      opacity: 0;
-   }
-   90%{
-      opacity: 0.50;
-   }
-   100%{
-      opacity: 1;
-   }
+   0%{opacity: 0;}
+   80%{opacity: 0;}
+   90%{opacity: 0.50;}
+   100%{opacity: 1;}
 }
 
 @keyframes opacity{
-   0%{
-      opacity: 0;
-   }
-   80%{
-      opacity: 0;
-   }
-   90%{
-      opacity: 0.50;
-   }
-   100%{
-      opacity: 1;
-   }
+   0%{opacity: 0;}
+   80%{opacity: 0;}
+   90%{opacity: 0.50;}
+   100%{opacity: 1;}
 }
 
 .links{
    position: relative;
-   top: 22vh;
+   top: 20vh;
    left: 140vh;
+   height: 20vh;
 
    display: -webkit-box;
+
    display: -ms-flexbox;
+
    display: flex;
    -webkit-box-pack: center;
    -ms-flex-pack: center;
@@ -160,6 +155,7 @@ body {
    align-items: center;
 
    -webkit-animation: links 1.5s linear 0.8s, opacity 2s ease-out;
+
    animation: links 1.5s linear 0.8s, opacity 2s ease-out;
    -webkit-animation-fill-mode:forwards;
    animation-fill-mode:forwards;
@@ -192,37 +188,86 @@ body {
 }
 
 .links a{
-   margin: 1.3vh;
+   margin: 2vh;
    margin-top: 0;
    margin-bottom: 0;
-   padding: 0;
-   text-indent: 0;
    font-size: 9vh;
    text-decoration: none;
-   -webkit-transition: all 0.5s ease;
-   -webkit-transition: all 0.2s ease;
-   transition: all 0.2s ease;
 }
 
-.links a:hover{
-   display: block;
-   -webkit-transform: rotate(-30deg);
-   transform: rotate(-30deg);
+.links a:hover {
+   cursor: pointer;
+   -webkit-animation: vzhuh 0.6s ease;
+   animation: vzhuh 0.6s ease;
+   -webkit-animation-iteration-count: 1;
+   animation-iteration-count: 1;
 }
 
+@-webkit-keyframes vzhuh{
+  15% {
+    -webkit-transform: translateX(9px);
+    transform: translateX(9px);
+  }
+  30% {
+    -webkit-transform: translateX(-9px);
+    transform: translateX(-9px);
+  }
+  40% {
+    -webkit-transform: translateX(6px);
+    transform: translateX(6px);
+  }
+  50% {
+    -webkit-transform: translateX(-6px);
+    transform: translateX(-6px);
+  }
+  65% {
+    -webkit-transform: translateX(3px);
+    transform: translateX(3px);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
 
+@keyframes vzhuh{
+  15% {
+    -webkit-transform: translateX(9px);
+    transform: translateX(9px);
+  }
+  30% {
+    -webkit-transform: translateX(-9px);
+    transform: translateX(-9px);
+  }
+  40% {
+    -webkit-transform: translateX(6px);
+    transform: translateX(6px);
+  }
+  50% {
+    -webkit-transform: translateX(-6px);
+    transform: translateX(-6px);
+  }
+  65% {
+    -webkit-transform: translateX(3px);
+    transform: translateX(3px);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
 
 .contacts{
    position: relative;
    top: 67vh;
-   color: white;
+   height: 20vh;
    font-size: 6vh;
    font-family: 'Athiti', sans-serif;
-   height: 20vh;
-
 
    display: -webkit-box;
+
    display: -ms-flexbox;
+
    display: flex;
    -webkit-box-orient: horizontal;
    -webkit-box-direction: normal;
@@ -241,37 +286,47 @@ body {
 
 @-webkit-keyframes contacts{
    to{
-      -webkit-transform: translate(0,-45vh);
-      -moz-transform: translate(0,-45vh);
-      -o-transform: translate(0,-45vh);
+      -webkit-transform: translate(0,-51vh);
+      -moz-transform: translate(0,-51vh);
+      -o-transform: translate(0,-51vh);
    }
 }
 
 @keyframes contacts{
    to{
-      -webkit-transform: translate(0,-45vh);
-      -moz-transform: translate(0,-45vh);
-      -o-transform: translate(0,-45vh);
+      -webkit-transform: translate(0,-51vh);
+      -moz-transform: translate(0,-51vh);
+      -o-transform: translate(0,-51vh);
    }
 }
 
 .contacts a{
+   margin: 3vh;
+   text-decoration: none;
+   color: white;
+
    display: -webkit-box;
+
    display: -ms-flexbox;
+
    display: flex;
    -webkit-box-orient: vertical;
    -webkit-box-direction: normal;
    -ms-flex-direction: column;
    flex-direction: column;
-   margin: 3vh;
-   text-decoration: none;
-   color: white;
+
+   -webkit-transition: all 0.5s ease;
+
+   transition: all 0.5s ease;
 }
 
 .contacts a:hover{
+   cursor: pointer;
    color: black;
-/*   font-size: 6.3vh;*/
+   -webkit-transform: rotate(-3deg);
+   transform: rotate(-3deg);
 }
+
 .contacts a div{
    display: -webkit-box;
    display: -ms-flexbox;
@@ -284,13 +339,6 @@ body {
    -ms-flex-pack: center;
    justify-content: center;
 }
-/*
-.contacts a p{
-   position: relative;
-   top: -20vh;
-
-}
-*/
 
 .contacts a div p{
    position: relative;
@@ -303,39 +351,150 @@ body {
    top: 0.5vh;
 }
 
-.socicon-linkedin{
+.socicon-linkedin {
    position: relative;
    top: -1vh;
    font-size: 11vh;
    color: #00a0dc;
 }
 
+.socicon-linkedin:hover{
+   font-size: 15vh;
+   -webkit-animation: 3s linkedin linear;
+   animation: 3s linkedin linear;
+   -webkit-animation-iteration-count: infinite;
+   animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes linkedin {
+   0%{color: #00a0dc;}
+   25%{color: #6e5494;}
+   50%{color: #00FF33;}
+   75%{color: #ffff00;}
+   100%{color: #e1306c;}
+}
+
+@keyframes linkedin {
+   0%{color: #00a0dc;}
+   25%{color: #6e5494;}
+   50%{color: #00FF33;}
+   75%{color: #ffff00;}
+   100%{color: #e1306c;}
+}
+
 .socicon-github{
    color: #6e5494;
 }
 
-/*
-.socicon-github:hover,
-.socicon-telegram:hover,
-.socicon-instagram:hover,
-.socicon-linkedin:hover{
-   font-size: 15vh;
+.socicon-github:hover{
+   font-size: 13vh;
+   -webkit-animation: 3s github linear;
+   animation: 3s github linear;
+   -webkit-animation-iteration-count: infinite;
+   animation-iteration-count: infinite;
 }
-*/
+
+@-webkit-keyframes github {
+   0%{color: #6e5494;}
+   25%{color: #00FF33;}
+   50%{color: #ffff00;}
+   75%{color: #e1306c;}
+   100%{color: #00a0dc;}
+}
+
+@keyframes github {
+   0%{color: #6e5494;}
+   25%{color: #00FF33;}
+   50%{color: #ffff00;}
+   75%{color: #e1306c;}
+   100%{color: #00a0dc;}
+}
 
 .socicon-telegram{
-   color: rgba(0, 255, 51, 0.75);
+   color: #00FF33;
+}
+
+.socicon-telegram:hover{
+   font-size: 13vh;
+   -webkit-animation: 3s telegram linear;
+   animation: 3s telegram linear;
+   -webkit-animation-iteration-count: infinite;
+   animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes telegram {
+   0%{color: #00FF33;}
+   25%{color: #ffff00;}
+   50%{color: #e1306c;}
+   75%{color: #00a0dc;}
+   100%{color: #6e5494;}
+}
+
+@keyframes telegram {
+   0%{color: #00FF33;}
+   25%{color: #ffff00;}
+   50%{color: #e1306c;}
+   75%{color: #00a0dc;}
+   100%{color: #6e5494;}
 }
 
 .socicon-vkontakte{
    position: relative;
-   top: 1.2vh;
-   font-size: 13vh;
-   color: rgba(255, 255, 0, 0.75);
+   top: 1vh;
+   color: #ffff00;
+   font-size: 12vh;
+}
+
+.socicon-vkontakte:hover{
+   font-size: 18vh;
+   -webkit-animation: 3s vkontakte linear;
+   animation: 3s vkontakte linear;
+   -webkit-animation-iteration-count: infinite;
+   animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes vkontakte {
+   0%{color: #ffff00;}
+   25%{color: #e1306c;}
+   50%{color: #00a0dc;}
+   75%{color: #6e5494;}
+   100%{color: #00FF33;}
+}
+
+@keyframes vkontakte {
+   0%{color: #ffff00;}
+   25%{color: #e1306c;}
+   50%{color: #00a0dc;}
+   75%{color: #6e5494;}
+   100%{color: #00FF33;}
 }
 
 .socicon-instagram{
    position: relative;
    top: 0.3vh;
    color: #e1306c;
+}
+
+.socicon-instagram:hover{
+   font-size: 13vh;
+   -webkit-animation: 3s instagram linear;
+   animation: 3s instagram linear;
+   -webkit-animation-iteration-count: infinite;
+   animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes instagram {
+   0%{color: #e1306c;}
+   25%{color: #00a0dc;}
+   50%{color: #6e5494;}
+   75%{color: #00FF33;}
+   100%{color: #ffff00;}
+}
+
+@keyframes instagram {
+   0%{color: #e1306c;}
+   25%{color: #00a0dc;}
+   50%{color: #6e5494;}
+   75%{color: #00FF33;}
+   100%{color: #ffff00;}
 }
