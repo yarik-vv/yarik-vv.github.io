@@ -521,8 +521,10 @@ body {
       top: 43vh;
    }
    .contacts a{
-      height: 10vh;
-      margin: 4vh;
+      position: relative;
+      top: 7vh;
+      height: 22vh;
+      margin: -2vh;
    }
    .contacts a:hover{
       -webkit-transform: none;
