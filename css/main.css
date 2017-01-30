@@ -49,12 +49,14 @@ body {
 }
 
 .name{
+   font-family: 'Ubuntu', sans-serif;
    font-size: 13vh;
 }
 
 .develop{
    position: relative;
    left: -43vh;
+   font-family: 'Bubbler One', sans-serif;
 
    display: -webkit-box;
    display: -ms-flexbox;
@@ -72,6 +74,18 @@ body {
    animation: develop 1.5s linear 0.8s, opacity 2s ease-out;
    -webkit-animation-fill-mode:forwards;
    animation-fill-mode:forwards;
+}
+.develop p{
+   text-indent: 20px;
+   margin: 0px;
+}
+.develop :nth-child(1){
+   position: relative;
+   top: 0.5vh;
+}
+.develop :nth-child(2){
+   position: relative;
+   top: 0.5vh;
 }
 
 @-webkit-keyframes develop{
@@ -130,14 +144,9 @@ body {
    }
 }
 
-.develop p{
-   text-indent: 10px;
-   margin: 0px;
-}
-
 .links{
    position: relative;
-   top: 24vh;
+   top: 22vh;
    left: 140vh;
 
    display: -webkit-box;
@@ -188,25 +197,29 @@ body {
    margin-bottom: 0;
    padding: 0;
    text-indent: 0;
-   font-size: 10vh;
+   font-size: 9vh;
    text-decoration: none;
    -webkit-transition: all 0.5s ease;
-   transition: all 0.5s ease;
+   -webkit-transition: all 0.2s ease;
+   transition: all 0.2s ease;
 }
 
 .links a:hover{
    display: block;
-   -webkit-transform: rotate(360deg);
-   transform: rotate(360deg);
+   -webkit-transform: rotate(-30deg);
+   transform: rotate(-30deg);
 }
 
 
 
 .contacts{
    position: relative;
-   top: 70vh;
+   top: 67vh;
    color: white;
    font-size: 6vh;
+   font-family: 'Athiti', sans-serif;
+   height: 20vh;
+
 
    display: -webkit-box;
    display: -ms-flexbox;
@@ -228,17 +241,17 @@ body {
 
 @-webkit-keyframes contacts{
    to{
-      -webkit-transform: translate(0,-43vh);
-      -moz-transform: translate(0,-43vh);
-      -o-transform: translate(0,-43vh);
+      -webkit-transform: translate(0,-45vh);
+      -moz-transform: translate(0,-45vh);
+      -o-transform: translate(0,-45vh);
    }
 }
 
 @keyframes contacts{
    to{
-      -webkit-transform: translate(0,-43vh);
-      -moz-transform: translate(0,-43vh);
-      -o-transform: translate(0,-43vh);
+      -webkit-transform: translate(0,-45vh);
+      -moz-transform: translate(0,-45vh);
+      -o-transform: translate(0,-45vh);
    }
 }
 
@@ -257,6 +270,7 @@ body {
 
 .contacts a:hover{
    color: black;
+/*   font-size: 6.3vh;*/
 }
 .contacts a div{
    display: -webkit-box;
@@ -270,12 +284,18 @@ body {
    -ms-flex-pack: center;
    justify-content: center;
 }
+/*
 .contacts a p{
-   margin: 0px;
+   position: relative;
+   top: -20vh;
+
 }
+*/
+
 .contacts a div p{
    position: relative;
    text-indent: 1vh;
+   top: -6.5vh;
 }
 
 .socicon-mail{
@@ -286,7 +306,7 @@ body {
 .socicon-linkedin{
    position: relative;
    top: -1vh;
-   font-size: 12vh;
+   font-size: 11vh;
    color: #00a0dc;
 }
 
@@ -294,12 +314,14 @@ body {
    color: #6e5494;
 }
 
+/*
 .socicon-github:hover,
 .socicon-telegram:hover,
 .socicon-instagram:hover,
 .socicon-linkedin:hover{
    font-size: 15vh;
 }
+*/
 
 .socicon-telegram{
    color: rgba(0, 255, 51, 0.75);
@@ -308,7 +330,7 @@ body {
 .socicon-vkontakte{
    position: relative;
    top: 1.2vh;
-   font-size: 15vh;
+   font-size: 13vh;
    color: rgba(255, 255, 0, 0.75);
 }
 
