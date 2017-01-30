@@ -520,9 +520,6 @@ body {
       position: relative;
       top: 43vh;
    }
-   .contacts a p{
-      position: relative;
-   }
    .contacts a{
       height: 10vh;
       margin: 4vh;
@@ -572,7 +569,10 @@ body {
    }
    .links{
       position: relative;
-      top: -0vh;
+      top: 0;
+      left: 0;
+      -webkit-animation: opacity 2s ease-out;
+      animation: opacity 2s ease-out;
    }
    @keyframes name{
       to{
@@ -588,4 +588,30 @@ body {
          -o-transform: translate(0,30vh);
       }
    }
+/*
+   @-webkit-keyframes links{
+      0%{
+         -webkit-transform: translate(0,0);
+         -moz-transform: translate(0,0);
+         -o-transform: translate(0,0);
+      }
+      100%{
+         -webkit-transform: translate(-140vh,0);
+         -moz-transform: translate(-140vh,0);
+         -o-transform: translate(-140vh,0);
+      }
+   }
+   @keyframes links{
+      0%{
+         -webkit-transform: translate(0,0);
+         -moz-transform: translate(0,0);
+         -o-transform: translate(0,0);
+      }
+      100%{
+         -webkit-transform: translate(-140vh,0);
+         -moz-transform: translate(-140vh,0);
+         -o-transform: translate(-140vh,0);
+      }
+   }
+*/
 }
