@@ -10,15 +10,19 @@ body {
    background-attachment: fixed;
 }
 
+h1,h2,h3{
+   font-weight: 400;
+   margin: 0;
+   padding: 0;
+}
+
 .main {
    position: relative;
    top: -20vh;
    color: white;
 
    display: -webkit-box;
-
    display: -ms-flexbox;
-
    display: flex;
    -webkit-box-orient: horizontal;
    -webkit-box-direction: normal;
@@ -29,7 +33,6 @@ body {
    justify-content: center;
 
    -webkit-animation: name 1s linear 0.5s;
-
    animation: name 1s linear 0.5s;
    -webkit-animation-fill-mode:forwards;
    animation-fill-mode:forwards;
@@ -54,6 +57,26 @@ body {
 .name{
    font-family: 'Ubuntu', sans-serif;
    font-size: 13vh;
+
+   display: -webkit-box;
+   display: -ms-flexbox;
+   display: flex;
+   -webkit-box-orient: horizontal;
+   -webkit-box-direction: normal;
+   -ms-flex-direction: row;
+   flex-direction: row;
+   -webkit-box-pack: center;
+   -ms-flex-pack: center;
+   justify-content: center;
+}
+
+.name :nth-child(2){
+   text-indent: 3vh;
+}
+
+.name p{
+   padding: 0;
+   margin: 0;
 }
 
 .develop{
@@ -63,9 +86,7 @@ body {
    font-size: 5vh;
 
    display: -webkit-box;
-
    display: -ms-flexbox;
-
    display: flex;
    -webkit-box-orient: vertical;
    -webkit-box-direction: normal;
@@ -76,7 +97,6 @@ body {
    justify-content: center;
 
    -webkit-animation: develop 1.5s linear 0.8s, opacity 2s ease-out;
-
    animation: develop 1.5s linear 0.8s, opacity 2s ease-out;
    -webkit-animation-fill-mode:forwards;
    animation-fill-mode:forwards;
@@ -84,16 +104,16 @@ body {
 
 .develop p{
    text-indent: 15px;
-   margin: 0px;
+   margin: 0;
 }
 
 .develop :nth-child(1){
    position: relative;
-   top: 0.5vh;
+   top: 0.3vh;
 }
 .develop :nth-child(2){
    position: relative;
-   top: 0.5vh;
+   top: 0.3vh;
 }
 
 @-webkit-keyframes develop{
@@ -143,9 +163,7 @@ body {
    height: 20vh;
 
    display: -webkit-box;
-
    display: -ms-flexbox;
-
    display: flex;
    -webkit-box-pack: center;
    -ms-flex-pack: center;
@@ -155,7 +173,6 @@ body {
    align-items: center;
 
    -webkit-animation: links 1.5s linear 0.8s, opacity 2s ease-out;
-
    animation: links 1.5s linear 0.8s, opacity 2s ease-out;
    -webkit-animation-fill-mode:forwards;
    animation-fill-mode:forwards;
@@ -265,9 +282,7 @@ body {
    font-family: 'Athiti', sans-serif;
 
    display: -webkit-box;
-
    display: -ms-flexbox;
-
    display: flex;
    -webkit-box-orient: horizontal;
    -webkit-box-direction: normal;
@@ -278,7 +293,6 @@ body {
    justify-content: center;
 
    -webkit-animation: contacts 1s linear 0.5s;
-
    animation: contacts 1s linear 0.5s;
    -webkit-animation-fill-mode:forwards;
    animation-fill-mode:forwards;
@@ -306,9 +320,7 @@ body {
    color: white;
 
    display: -webkit-box;
-
    display: -ms-flexbox;
-
    display: flex;
    -webkit-box-orient: vertical;
    -webkit-box-direction: normal;
@@ -316,7 +328,6 @@ body {
    flex-direction: column;
 
    -webkit-transition: all 0.5s ease;
-
    transition: all 0.5s ease;
 }
 
@@ -499,7 +510,6 @@ body {
    100%{color: #ffff00;}
 }
 
-/* test hover in touch screen*/
 @media (hover: none){
    .contacts a:hover{
       -webkit-transform: none;
@@ -526,20 +536,28 @@ body {
       font-size: 12vh;
    }
 }
-/* end test hover in touch screen*/
-/*906*/
-/*1025*/
-@media (device-aspect-ratio: 568/320){
-   .contacts a{
+
+@media (max-width: 1440px){
+   .name{
+      font-size: 12;
+   }
+   .develop{
+      font-size: 4;
+   }
+   .contacts{
       font-size: 5vh;
    }
    .contacts span{
       position: relative;
       top: -1vh;
    }
+   .contacts .socicon-mail{
+      position: relative;
+      top: -0.6vh;
+   }
 }
 
-@media (max-width: 906px){
+@media (max-width: 813px), (orientation: portrait){
    .main{
       -webkit-box-orient: vertical;
       -webkit-box-direction: normal;
@@ -551,8 +569,8 @@ body {
       align-items: center;
    }
 }
-/*773*/
-@media (max-width: 773px){
+
+@media (max-width: 770px){
    @keyframes name{
       to{
          -webkit-transform: translate(0,30vh);
@@ -585,11 +603,21 @@ body {
       margin-bottom: 12vh;
    }
 }
-/*577*/
-/*600*/
-/*768*/
-/*800*/
-@media (device-aspect-ratio: 320/568){
+
+@media (max-width: 619px), (orientation: portrait){
+   .main{
+      top: -28vh;
+   }
+   .name{
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      -ms-grid-row-align: center;
+      align-items: center;
+   }
    .socicon-github,
    .socicon-telegram,
    .socicon-instagram{
@@ -602,6 +630,9 @@ body {
       margin: 2vh;
       text-align: center;
       line-height: 13vh;
+   }
+   .name :nth-child(2){
+      text-indent: 0;
    }
    .develop{
       line-height: 4.5vh;
@@ -623,139 +654,38 @@ body {
    .contacts span{
       top: 0;
    }
+   .contacts .socicon-mail{
+      position: relative;
+      top: 0.1vh;
+   }
    @-webkit-keyframes name{
       to{
-         -webkit-transform: translate(0,18vh);
-         -moz-transform: translate(0,18vh);
-         -o-transform: translate(0,18vh);
+         -webkit-transform: translate(0,26vh);
+         -moz-transform: translate(0,26vh);
+         -o-transform: translate(0,26vh);
       }
    }
    @keyframes name{
       to{
-         -webkit-transform: translate(0,18vh);
-         -moz-transform: translate(0,18vh);
-         -o-transform: translate(0,18vh);
+         -webkit-transform: translate(0,26vh);
+         -moz-transform: translate(0,26vh);
+         -o-transform: translate(0,26vh);
       }
    }
 }
 
-@media (max-width: 1px){
-   html{
-      overflow: auto
-   }
-/*
-   .main,
-   .contacts,
-   .contacts a{
+@media (orientation: portrait) and (min-height: 770px){
+   .contacts{
       -webkit-box-orient: vertical;
       -webkit-box-direction: normal;
       -ms-flex-direction: column;
       flex-direction: column;
-   }
-*/
-   .contacts{
-      height: auto;
       -webkit-box-align: center;
       -ms-flex-align: center;
       -ms-grid-row-align: center;
       align-items: center;
-      position: relative;
-      top: 43vh;
    }
    .contacts a{
-      position: relative;
-      top: 7vh;
-      height: 22vh;
-      margin: -2vh;
+      margin-bottom: 12vh;
    }
-   .contacts a:hover{
-      -webkit-transform: none;
-      transform: none;
-      color: white;
-      -webkit-animation: vzhuh 0.6s ease;
-      animation: vzhuh 0.6s ease;
-   }
-   .socicon-github,
-   .socicon-telegram,
-   .socicon-instagram{
-      font-size: 8vh;
-   }
-   .socicon-github:hover,
-   .socicon-telegram:hover,
-   .socicon-instagram:hover{
-      -webkit-animation: none;
-      animation: none;
-      font-size: 8vh;
-   }
-   .socicon-linkedin:hover{
-      -webkit-animation: none;
-      animation: none;
-      font-size: 10vh;
-   }
-    .socicon-linkedin{
-      font-size: 10vh;
-   }
-   .socicon-vkontakte:hover{
-      -webkit-animation: none;
-      animation: none;
-      font-size: 12vh;
-   }
-   .links a{
-      margin: 1vh;
-   }
-   .name{
-      padding-left: 1vh;
-   }
-   .name,
-   .develop{
-      position: relative;
-      top: -10vh;
-   }
-   .links{
-      position: relative;
-      top: 0;
-      left: 0;
-      -webkit-animation: opacity 2s ease-out;
-      animation: opacity 2s ease-out;
-   }
-   @keyframes name{
-      to{
-         -webkit-transform: translate(0,30vh);
-         -moz-transform: translate(0,30vh);
-         -o-transform: translate(0,30vh);
-      }
-   }
-   @-webkit-keyframes name{
-      to{
-         -webkit-transform: translate(0,30vh);
-         -moz-transform: translate(0,30vh);
-         -o-transform: translate(0,30vh);
-      }
-   }
-/*
-   @-webkit-keyframes links{
-      0%{
-         -webkit-transform: translate(0,0);
-         -moz-transform: translate(0,0);
-         -o-transform: translate(0,0);
-      }
-      100%{
-         -webkit-transform: translate(-140vh,0);
-         -moz-transform: translate(-140vh,0);
-         -o-transform: translate(-140vh,0);
-      }
-   }
-   @keyframes links{
-      0%{
-         -webkit-transform: translate(0,0);
-         -moz-transform: translate(0,0);
-         -o-transform: translate(0,0);
-      }
-      100%{
-         -webkit-transform: translate(-140vh,0);
-         -moz-transform: translate(-140vh,0);
-         -o-transform: translate(-140vh,0);
-      }
-   }
-*/
 }
