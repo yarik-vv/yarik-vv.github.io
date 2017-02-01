@@ -1,71 +1,62 @@
-/*icon*/
 @font-face {
-  font-family: "socicon";
-/*
-   src:url(".eot");
-   src:url(".eot?#iefix") format("embedded-opentype"),
-   url("icon.ttf") format("truetype"),
-*/
-   src: url("../icon.woff") format("woff");
+   font-family: "socicon";
+   src: url("../icon.woff2") format("woff2"), url("../icon.woff") format("woff");
    font-weight: normal;
    font-style: normal;
 }
 [data-socicon]:before {
-  font-family: "socicon" !important;
-  content: attr(data-socicon);
-  font-style: normal !important;
-  font-weight: normal !important;
-  font-variant: normal !important;
-  text-transform: none !important;
-  speak: none;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+   font-family: "socicon" !important;
+   content: attr(data-socicon);
+   font-style: normal !important;
+   font-weight: normal !important;
+   font-variant: normal !important;
+   text-transform: none !important;
+   speak: none;
+   line-height: 1;
+   -webkit-font-smoothing: antialiased;
+   -moz-osx-font-smoothing: grayscale;
 }
-
 [class^="socicon-"]:before,
 [class*=" socicon-"]:before {
-  font-family: "socicon" !important;
-  font-style: normal !important;
-  font-weight: normal !important;
-  font-variant: normal !important;
-  text-transform: none !important;
-  speak: none;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+   font-family: "socicon" !important;
+   font-style: normal !important;
+   font-weight: normal !important;
+   font-variant: normal !important;
+   text-transform: none !important;
+   speak: none;
+   line-height: 1;
+   -webkit-font-smoothing: antialiased;
+   -moz-osx-font-smoothing: grayscale;
 }
-
 .socicon-periscope:before {
-  content: "\e00f";
+   content: "\e00f";
 }
 .socicon-vkontakte:before {
-  content: "\e01a";
+   content: "\e01a";
 }
 .socicon-mail:before {
-  content: "\e01f";
+   content: "\e01f";
 }
 .socicon-github:before {
-  content: "\e030";
+   content: "\e030";
 }
 .socicon-linkedin:before {
-  content: "\e049";
+   content: "\e049";
 }
 .socicon-telegram:before {
-  content: "\e06e";
+   content: "\e06e";
 }
 .socicon-viber:before {
-  content: "\e071";
+   content: "\e071";
 }
 .socicon-instagram:before {
-  content: "\e057";
+   content: "\e057";
 }
 /*icon*/
 
-html{
+html {
    overflow: hidden;
 }
-
 body {
    margin: 0;
    height: 100vh;
@@ -73,12 +64,10 @@ body {
    background-size: cover;
    background-attachment: fixed;
 }
-
 .main {
    position: relative;
    top: -20vh;
    color: white;
-
    display: -webkit-box;
    display: -ms-flexbox;
    display: flex;
@@ -89,33 +78,28 @@ body {
    -webkit-box-pack: center;
    -ms-flex-pack: center;
    justify-content: center;
-
    -webkit-animation: name 1s linear 0.5s;
    animation: name 1s linear 0.5s;
-   -webkit-animation-fill-mode:forwards;
-   animation-fill-mode:forwards;
+   -webkit-animation-fill-mode: forwards;
+   animation-fill-mode: forwards;
 }
-
-@-webkit-keyframes name{
-   to{
-      -webkit-transform: translate(0,40vh);
-      -moz-transform: translate(0,40vh);
-      -o-transform: translate(0,40vh);
+@-webkit-keyframes name {
+   to {
+      -webkit-transform: translate(0, 40vh);
+      -moz-transform: translate(0, 40vh);
+      -o-transform: translate(0, 40vh);
    }
 }
-
-@keyframes name{
-   to{
-      -webkit-transform: translate(0,40vh);
-      -moz-transform: translate(0,40vh);
-      -o-transform: translate(0,40vh);
+@keyframes name {
+   to {
+      -webkit-transform: translate(0, 40vh);
+      -moz-transform: translate(0, 40vh);
+      -o-transform: translate(0, 40vh);
    }
 }
-
-.name{
+.name {
    font-family: 'Ubuntu', sans-serif;
    font-size: 13vh;
-
    display: -webkit-box;
    display: -ms-flexbox;
    display: flex;
@@ -127,22 +111,18 @@ body {
    -ms-flex-pack: center;
    justify-content: center;
 }
-
-.name :nth-child(2){
+.name:nth-child(2) {
    text-indent: 3vh;
 }
-
-.name p{
+.name p {
    padding: 0;
    margin: 0;
 }
-
-.develop{
+.develop {
    position: relative;
    left: -43vh;
    font-family: 'Bubbler One', sans-serif;
    font-size: 5vh;
-
    display: -webkit-box;
    display: -ms-flexbox;
    display: flex;
@@ -153,73 +133,80 @@ body {
    -webkit-box-pack: center;
    -ms-flex-pack: center;
    justify-content: center;
-
    -webkit-animation: develop 1.5s linear 0.8s, opacity 2s ease-out;
    animation: develop 1.5s linear 0.8s, opacity 2s ease-out;
-   -webkit-animation-fill-mode:forwards;
-   animation-fill-mode:forwards;
+   -webkit-animation-fill-mode: forwards;
+   animation-fill-mode: forwards;
 }
-
-.develop p{
+.develop p {
    text-indent: 15px;
    margin: 0;
 }
-
-.develop :nth-child(1){
+.develop:nth-child(1) {
    position: relative;
    top: 0.3vh;
 }
-.develop :nth-child(2){
+.develop:nth-child(2) {
    position: relative;
    top: 0.3vh;
 }
-
-@-webkit-keyframes develop{
-   from{
-      -webkit-transform: translate(0,0);
-      -moz-transform: translate(0,0);
-      -o-transform: translate(0,0);
+@-webkit-keyframes develop {
+   from {
+      -webkit-transform: translate(0, 0);
+      -moz-transform: translate(0, 0);
+      -o-transform: translate(0, 0);
    }
-   to{
-      -webkit-transform: translate(43vh,0);
-      -moz-transform: translate(43vh,0);
-      -o-transform: translate(43vh,0);
-   }
-}
-
-@keyframes develop{
-   from{
-      -webkit-transform: translate(0,0);
-      -moz-transform: translate(0,0);
-      -o-transform: translate(0,0);
-   }
-   to{
-      -webkit-transform: translate(43vh,0);
-      -moz-transform: translate(43vh,0);
-      -o-transform: translate(43vh,0);
+   to {
+      -webkit-transform: translate(43vh, 0);
+      -moz-transform: translate(43vh, 0);
+      -o-transform: translate(43vh, 0);
    }
 }
-
-@-webkit-keyframes opacity{
-   0%{opacity: 0;}
-   80%{opacity: 0;}
-   90%{opacity: 0.50;}
-   100%{opacity: 1;}
+@keyframes develop {
+   from {
+      -webkit-transform: translate(0, 0);
+      -moz-transform: translate(0, 0);
+      -o-transform: translate(0, 0);
+   }
+   to {
+      -webkit-transform: translate(43vh, 0);
+      -moz-transform: translate(43vh, 0);
+      -o-transform: translate(43vh, 0);
+   }
 }
-
-@keyframes opacity{
-   0%{opacity: 0;}
-   80%{opacity: 0;}
-   90%{opacity: 0.50;}
-   100%{opacity: 1;}
+@-webkit-keyframes opacity {
+   0% {
+      opacity: 0;
+   }
+   80% {
+      opacity: 0;
+   }
+   90% {
+      opacity: 0.50;
+   }
+   100% {
+      opacity: 1;
+   }
 }
-
-.links{
+@keyframes opacity {
+   0% {
+      opacity: 0;
+   }
+   80% {
+      opacity: 0;
+   }
+   90% {
+      opacity: 0.50;
+   }
+   100% {
+      opacity: 1;
+   }
+}
+.links {
    position: relative;
    top: 20vh;
    left: 140vh;
    height: 20vh;
-
    display: -webkit-box;
    display: -ms-flexbox;
    display: flex;
@@ -229,47 +216,42 @@ body {
    -webkit-box-align: center;
    -ms-flex-align: center;
    align-items: center;
-
    -webkit-animation: links 1.5s linear 0.8s, opacity 2s ease-out;
    animation: links 1.5s linear 0.8s, opacity 2s ease-out;
-   -webkit-animation-fill-mode:forwards;
-   animation-fill-mode:forwards;
+   -webkit-animation-fill-mode: forwards;
+   animation-fill-mode: forwards;
 }
-
-@-webkit-keyframes links{
-   0%{
-      -webkit-transform: translate(0,0);
-      -moz-transform: translate(0,0);
-      -o-transform: translate(0,0);
+@-webkit-keyframes links {
+   0% {
+      -webkit-transform: translate(0, 0);
+      -moz-transform: translate(0, 0);
+      -o-transform: translate(0, 0);
    }
-   100%{
-      -webkit-transform: translate(-140vh,0);
-      -moz-transform: translate(-140vh,0);
-      -o-transform: translate(-140vh,0);
-   }
-}
-
-@keyframes links{
-   0%{
-      -webkit-transform: translate(0,0);
-      -moz-transform: translate(0,0);
-      -o-transform: translate(0,0);
-   }
-   100%{
-      -webkit-transform: translate(-140vh,0);
-      -moz-transform: translate(-140vh,0);
-      -o-transform: translate(-140vh,0);
+   100% {
+      -webkit-transform: translate(-140vh, 0);
+      -moz-transform: translate(-140vh, 0);
+      -o-transform: translate(-140vh, 0);
    }
 }
-
-.links a{
+@keyframes links {
+   0% {
+      -webkit-transform: translate(0, 0);
+      -moz-transform: translate(0, 0);
+      -o-transform: translate(0, 0);
+   }
+   100% {
+      -webkit-transform: translate(-140vh, 0);
+      -moz-transform: translate(-140vh, 0);
+      -o-transform: translate(-140vh, 0);
+   }
+}
+.links a {
    margin: 2vh;
    margin-top: 0;
    margin-bottom: 0;
    font-size: 9vh;
    text-decoration: none;
 }
-
 .links a:hover {
    cursor: pointer;
    -webkit-animation: vzhuh 0.6s ease;
@@ -277,68 +259,64 @@ body {
    -webkit-animation-iteration-count: 1;
    animation-iteration-count: 1;
 }
-
-@-webkit-keyframes vzhuh{
-  15% {
-    -webkit-transform: translateX(9px);
-    transform: translateX(9px);
-  }
-  30% {
-    -webkit-transform: translateX(-9px);
-    transform: translateX(-9px);
-  }
-  40% {
-    -webkit-transform: translateX(6px);
-    transform: translateX(6px);
-  }
-  50% {
-    -webkit-transform: translateX(-6px);
-    transform: translateX(-6px);
-  }
-  65% {
-    -webkit-transform: translateX(3px);
-    transform: translateX(3px);
-  }
-  100% {
-    -webkit-transform: translateX(0);
-    transform: translateX(0);
-  }
+@-webkit-keyframes vzhuh {
+   15% {
+      -webkit-transform: translateX(9px);
+      transform: translateX(9px);
+   }
+   30% {
+      -webkit-transform: translateX(-9px);
+      transform: translateX(-9px);
+   }
+   40% {
+      -webkit-transform: translateX(6px);
+      transform: translateX(6px);
+   }
+   50% {
+      -webkit-transform: translateX(-6px);
+      transform: translateX(-6px);
+   }
+   65% {
+      -webkit-transform: translateX(3px);
+      transform: translateX(3px);
+   }
+   100% {
+      -webkit-transform: translateX(0);
+      transform: translateX(0);
+   }
 }
-
-@keyframes vzhuh{
-  15% {
-    -webkit-transform: translateX(9px);
-    transform: translateX(9px);
-  }
-  30% {
-    -webkit-transform: translateX(-9px);
-    transform: translateX(-9px);
-  }
-  40% {
-    -webkit-transform: translateX(6px);
-    transform: translateX(6px);
-  }
-  50% {
-    -webkit-transform: translateX(-6px);
-    transform: translateX(-6px);
-  }
-  65% {
-    -webkit-transform: translateX(3px);
-    transform: translateX(3px);
-  }
-  100% {
-    -webkit-transform: translateX(0);
-    transform: translateX(0);
-  }
+@keyframes vzhuh {
+   15% {
+      -webkit-transform: translateX(9px);
+      transform: translateX(9px);
+   }
+   30% {
+      -webkit-transform: translateX(-9px);
+      transform: translateX(-9px);
+   }
+   40% {
+      -webkit-transform: translateX(6px);
+      transform: translateX(6px);
+   }
+   50% {
+      -webkit-transform: translateX(-6px);
+      transform: translateX(-6px);
+   }
+   65% {
+      -webkit-transform: translateX(3px);
+      transform: translateX(3px);
+   }
+   100% {
+      -webkit-transform: translateX(0);
+      transform: translateX(0);
+   }
 }
-
-.contacts{
+.contacts {
    position: relative;
    top: 67vh;
    height: 20vh;
    font-size: 6vh;
    font-family: 'Athiti', sans-serif;
-
    display: -webkit-box;
    display: -ms-flexbox;
    display: flex;
@@ -349,34 +327,29 @@ body {
    -webkit-box-pack: center;
    -ms-flex-pack: center;
    justify-content: center;
-
    -webkit-animation: contacts 1s linear 0.5s;
    animation: contacts 1s linear 0.5s;
-   -webkit-animation-fill-mode:forwards;
-   animation-fill-mode:forwards;
+   -webkit-animation-fill-mode: forwards;
+   animation-fill-mode: forwards;
 }
-
-@-webkit-keyframes contacts{
-   to{
-      -webkit-transform: translate(0,-51vh);
-      -moz-transform: translate(0,-51vh);
-      -o-transform: translate(0,-51vh);
+@-webkit-keyframes contacts {
+   to {
+      -webkit-transform: translate(0, -51vh);
+      -moz-transform: translate(0, -51vh);
+      -o-transform: translate(0, -51vh);
    }
 }
-
-@keyframes contacts{
-   to{
-      -webkit-transform: translate(0,-51vh);
-      -moz-transform: translate(0,-51vh);
-      -o-transform: translate(0,-51vh);
+@keyframes contacts {
+   to {
+      -webkit-transform: translate(0, -51vh);
+      -moz-transform: translate(0, -51vh);
+      -o-transform: translate(0, -51vh);
    }
 }
-
-.contacts a{
+.contacts a {
    margin: 3vh;
    text-decoration: none;
    color: white;
-
    display: -webkit-box;
    display: -ms-flexbox;
    display: flex;
@@ -384,19 +357,16 @@ body {
    -webkit-box-direction: normal;
    -ms-flex-direction: column;
    flex-direction: column;
-
    -webkit-transition: all 0.5s ease;
    transition: all 0.5s ease;
 }
-
-.contacts a:hover{
+.contacts a:hover {
    cursor: pointer;
    color: black;
    -webkit-transform: rotate(-3deg);
    transform: rotate(-3deg);
 }
-
-.contacts a div{
+.contacts a div {
    display: -webkit-box;
    display: -ms-flexbox;
    display: flex;
@@ -408,168 +378,247 @@ body {
    -ms-flex-pack: center;
    justify-content: center;
 }
-
-.contacts a div p{
+.contacts a div p {
    position: relative;
    text-indent: 1vh;
    top: -6.5vh;
 }
-
-.socicon-mail{
+.socicon-mail {
    position: relative;
    top: 0.5vh;
 }
-
 .socicon-linkedin {
    position: relative;
    top: -1vh;
    font-size: 11vh;
    color: #00a0dc;
 }
-
-.socicon-linkedin:hover{
+.socicon-linkedin:hover {
    font-size: 15vh;
    -webkit-animation: 3s linkedin linear;
    animation: 3s linkedin linear;
    -webkit-animation-iteration-count: infinite;
    animation-iteration-count: infinite;
 }
-
 @-webkit-keyframes linkedin {
-   0%{color: #00a0dc;}
-   25%{color: #6e5494;}
-   50%{color: #00FF33;}
-   75%{color: #ffff00;}
-   100%{color: #e1306c;}
+   0% {
+      color: #00a0dc;
+   }
+   25% {
+      color: #6e5494;
+   }
+   50% {
+      color: #00FF33;
+   }
+   75% {
+      color: #ffff00;
+   }
+   100% {
+      color: #e1306c;
+   }
 }
-
 @keyframes linkedin {
-   0%{color: #00a0dc;}
-   25%{color: #6e5494;}
-   50%{color: #00FF33;}
-   75%{color: #ffff00;}
-   100%{color: #e1306c;}
+   0% {
+      color: #00a0dc;
+   }
+   25% {
+      color: #6e5494;
+   }
+   50% {
+      color: #00FF33;
+   }
+   75% {
+      color: #ffff00;
+   }
+   100% {
+      color: #e1306c;
+   }
 }
-
-.socicon-github{
+.socicon-github {
    color: #6e5494;
 }
-
-.socicon-github:hover{
+.socicon-github:hover {
    font-size: 13vh;
    -webkit-animation: 3s github linear;
    animation: 3s github linear;
    -webkit-animation-iteration-count: infinite;
    animation-iteration-count: infinite;
 }
-
 @-webkit-keyframes github {
-   0%{color: #6e5494;}
-   25%{color: #00FF33;}
-   50%{color: #ffff00;}
-   75%{color: #e1306c;}
-   100%{color: #00a0dc;}
+   0% {
+      color: #6e5494;
+   }
+   25% {
+      color: #00FF33;
+   }
+   50% {
+      color: #ffff00;
+   }
+   75% {
+      color: #e1306c;
+   }
+   100% {
+      color: #00a0dc;
+   }
 }
-
 @keyframes github {
-   0%{color: #6e5494;}
-   25%{color: #00FF33;}
-   50%{color: #ffff00;}
-   75%{color: #e1306c;}
-   100%{color: #00a0dc;}
+   0% {
+      color: #6e5494;
+   }
+   25% {
+      color: #00FF33;
+   }
+   50% {
+      color: #ffff00;
+   }
+   75% {
+      color: #e1306c;
+   }
+   100% {
+      color: #00a0dc;
+   }
 }
-
-.socicon-telegram{
+.socicon-telegram {
    color: #00FF33;
 }
-
-.socicon-telegram:hover{
+.socicon-telegram:hover {
    font-size: 13vh;
    -webkit-animation: 3s telegram linear;
    animation: 3s telegram linear;
    -webkit-animation-iteration-count: infinite;
    animation-iteration-count: infinite;
 }
-
 @-webkit-keyframes telegram {
-   0%{color: #00FF33;}
-   25%{color: #ffff00;}
-   50%{color: #e1306c;}
-   75%{color: #00a0dc;}
-   100%{color: #6e5494;}
+   0% {
+      color: #00FF33;
+   }
+   25% {
+      color: #ffff00;
+   }
+   50% {
+      color: #e1306c;
+   }
+   75% {
+      color: #00a0dc;
+   }
+   100% {
+      color: #6e5494;
+   }
 }
-
 @keyframes telegram {
-   0%{color: #00FF33;}
-   25%{color: #ffff00;}
-   50%{color: #e1306c;}
-   75%{color: #00a0dc;}
-   100%{color: #6e5494;}
+   0% {
+      color: #00FF33;
+   }
+   25% {
+      color: #ffff00;
+   }
+   50% {
+      color: #e1306c;
+   }
+   75% {
+      color: #00a0dc;
+   }
+   100% {
+      color: #6e5494;
+   }
 }
-
-.socicon-vkontakte{
+.socicon-vkontakte {
    position: relative;
    top: 1vh;
    color: #ffff00;
    font-size: 12vh;
 }
-
-.socicon-vkontakte:hover{
+.socicon-vkontakte:hover {
    font-size: 18vh;
    -webkit-animation: 3s vkontakte linear;
    animation: 3s vkontakte linear;
    -webkit-animation-iteration-count: infinite;
    animation-iteration-count: infinite;
 }
-
 @-webkit-keyframes vkontakte {
-   0%{color: #ffff00;}
-   25%{color: #e1306c;}
-   50%{color: #00a0dc;}
-   75%{color: #6e5494;}
-   100%{color: #00FF33;}
+   0% {
+      color: #ffff00;
+   }
+   25% {
+      color: #e1306c;
+   }
+   50% {
+      color: #00a0dc;
+   }
+   75% {
+      color: #6e5494;
+   }
+   100% {
+      color: #00FF33;
+   }
 }
-
 @keyframes vkontakte {
-   0%{color: #ffff00;}
-   25%{color: #e1306c;}
-   50%{color: #00a0dc;}
-   75%{color: #6e5494;}
-   100%{color: #00FF33;}
+   0% {
+      color: #ffff00;
+   }
+   25% {
+      color: #e1306c;
+   }
+   50% {
+      color: #00a0dc;
+   }
+   75% {
+      color: #6e5494;
+   }
+   100% {
+      color: #00FF33;
+   }
 }
-
-.socicon-instagram{
+.socicon-instagram {
    position: relative;
    top: 0.3vh;
    color: #e1306c;
 }
-
-.socicon-instagram:hover{
+.socicon-instagram:hover {
    font-size: 13vh;
    -webkit-animation: 3s instagram linear;
    animation: 3s instagram linear;
    -webkit-animation-iteration-count: infinite;
    animation-iteration-count: infinite;
 }
-
 @-webkit-keyframes instagram {
-   0%{color: #e1306c;}
-   25%{color: #00a0dc;}
-   50%{color: #6e5494;}
-   75%{color: #00FF33;}
-   100%{color: #ffff00;}
+   0% {
+      color: #e1306c;
+   }
+   25% {
+      color: #00a0dc;
+   }
+   50% {
+      color: #6e5494;
+   }
+   75% {
+      color: #00FF33;
+   }
+   100% {
+      color: #ffff00;
+   }
 }
-
 @keyframes instagram {
-   0%{color: #e1306c;}
-   25%{color: #00a0dc;}
-   50%{color: #6e5494;}
-   75%{color: #00FF33;}
-   100%{color: #ffff00;}
+   0% {
+      color: #e1306c;
+   }
+   25% {
+      color: #00a0dc;
+   }
+   50% {
+      color: #6e5494;
+   }
+   75% {
+      color: #00FF33;
+   }
+   100% {
+      color: #ffff00;
+   }
 }
-
-@media (hover: none), (max-width: 1000px), (orientation: portrait){
-   .contacts a:hover{
+@media (hover: none),
+(max-width: 1000px),
+(orientation: portrait) {
+   .contacts a:hover {
       -webkit-transform: none;
       transform: none;
       color: white;
@@ -578,50 +627,50 @@ body {
    }
    .socicon-github:hover,
    .socicon-telegram:hover,
-   .socicon-instagram:hover{
+   .socicon-instagram:hover {
       -webkit-animation: none;
       animation: none;
       font-size: 8vh;
    }
-   .socicon-linkedin:hover{
+   .socicon-linkedin:hover {
       -webkit-animation: none;
       animation: none;
       font-size: 10vh;
    }
-   .socicon-vkontakte:hover{
+   .socicon-vkontakte:hover {
       -webkit-animation: none;
       animation: none;
       font-size: 12vh;
    }
-   .links{
+   .links {
       left: 0;
       -webkit-animation: opacity 2s ease-out;
       animation: opacity 2s ease-out;
    }
 }
-
-@media (max-width: 1440px), (orientation: landscape) and (min-width: 1440px){
-   .name{
+@media (max-width: 1440px),
+(orientation: landscape) and (min-width: 1440px) {
+   .name {
       font-size: 12;
    }
-   .develop{
+   .develop {
       font-size: 4;
    }
-   .contacts{
+   .contacts {
       font-size: 5vh;
    }
-   .contacts span{
+   .contacts span {
       position: relative;
       top: -1vh;
    }
-   .contacts .socicon-mail{
+   .contacts .socicon-mail {
       position: relative;
       top: -0.6vh;
    }
 }
-
-@media (max-width: 813px), (orientation: portrait){
-   .main{
+@media (max-width: 813px),
+(orientation: portrait) {
+   .main {
       -webkit-box-orient: vertical;
       -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -632,26 +681,25 @@ body {
       align-items: center;
    }
 }
-
-@media (max-width: 770px){
-   @keyframes name{
-      to{
-         -webkit-transform: translate(0,30vh);
-         -moz-transform: translate(0,30vh);
-         -o-transform: translate(0,30vh);
+@media (max-width: 770px) {
+   @keyframes name {
+      to {
+         -webkit-transform: translate(0, 30vh);
+         -moz-transform: translate(0, 30vh);
+         -o-transform: translate(0, 30vh);
       }
    }
-   @-webkit-keyframes name{
-      to{
-         -webkit-transform: translate(0,30vh);
-         -moz-transform: translate(0,30vh);
-         -o-transform: translate(0,30vh);
+   @-webkit-keyframes name {
+      to {
+         -webkit-transform: translate(0, 30vh);
+         -moz-transform: translate(0, 30vh);
+         -o-transform: translate(0, 30vh);
       }
    }
-   .links{
+   .links {
       top: 8vh;
    }
-   .contacts{
+   .contacts {
       -webkit-box-orient: vertical;
       -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -662,38 +710,38 @@ body {
       align-items: center;
       top: 66vh;
    }
-   .contacts a{
+   .contacts a {
       margin-bottom: 12vh;
    }
-   .contacts{
+   .contacts {
       top: -100vh;
       left: -150vh;
       -webkit-animation: contacts 2.4s ease-out, opacity 2.2s ease-out;
       animation: contacts 2.4s ease-out, opacity 2.2s ease-out;
-      -webkit-animation-fill-mode:forwards;
-      animation-fill-mode:forwards;
+      -webkit-animation-fill-mode: forwards;
+      animation-fill-mode: forwards;
    }
-   @-webkit-keyframes contacts{
-      to{
+   @-webkit-keyframes contacts {
+      to {
          -webkit-transform: translate(150vh, 114vh);
-         -moz-transform: translate(0vh,0);
-         -o-transform: translate(0vh,0);
+         -moz-transform: translate(0vh, 0);
+         -o-transform: translate(0vh, 0);
       }
    }
-   @keyframes contacts{
-      to{
+   @keyframes contacts {
+      to {
          -webkit-transform: translate(150vh, 114vh);
-         -moz-transform: translate(0vh,0);
-         -o-transform: translate(0vh,0);
+         -moz-transform: translate(0vh, 0);
+         -o-transform: translate(0vh, 0);
       }
    }
 }
-
-@media (max-width: 619px), (orientation: portrait){
-   .main{
+@media (max-width: 619px),
+(orientation: portrait) {
+   .main {
       top: -28vh;
    }
-   .name{
+   .name {
       -webkit-box-orient: vertical;
       -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -705,86 +753,85 @@ body {
    }
    .socicon-github,
    .socicon-telegram,
-   .socicon-instagram{
+   .socicon-instagram {
       font-size: 8vh;
    }
-    .socicon-linkedin{
+   .socicon-linkedin {
       font-size: 10vh;
    }
-   .name{
+   .name {
       margin: 2vh;
       text-align: center;
       line-height: 13vh;
    }
-   .name :nth-child(2){
+   .name:nth-child(2) {
       text-indent: 0;
    }
-   .develop{
+   .develop {
       line-height: 4.5vh;
       font-size: 4.5vh;
       top: -1vh;
    }
-   .links{
+   .links {
       top: -5vh;
    }
-   .links a{
+   .links a {
       margin: 1vh;
    }
-/*
+   /*
    .contacts{
       top: 52vh;
    }
 */
-   .contacts a{
+   .contacts a {
       font-size: 5.5vh;
    }
-   .contacts span{
+   .contacts span {
       top: 0;
    }
-   .contacts .socicon-mail{
+   .contacts .socicon-mail {
       position: relative;
       top: 0.1vh;
    }
-   @-webkit-keyframes name{
-      to{
-         -webkit-transform: translate(0,26vh);
-         -moz-transform: translate(0,26vh);
-         -o-transform: translate(0,26vh);
+   @-webkit-keyframes name {
+      to {
+         -webkit-transform: translate(0, 26vh);
+         -moz-transform: translate(0, 26vh);
+         -o-transform: translate(0, 26vh);
       }
    }
-   @keyframes name{
-      to{
-         -webkit-transform: translate(0,26vh);
-         -moz-transform: translate(0,26vh);
-         -o-transform: translate(0,26vh);
+   @keyframes name {
+      to {
+         -webkit-transform: translate(0, 26vh);
+         -moz-transform: translate(0, 26vh);
+         -o-transform: translate(0, 26vh);
       }
    }
-   .contacts{
+   .contacts {
       top: -100vh;
       left: -150vh;
       -webkit-animation: contacts 2.4s ease-out, opacity 2.2s ease-out;
       animation: contacts 2.4s ease-out, opacity 2.2s ease-out;
-      -webkit-animation-fill-mode:forwards;
-      animation-fill-mode:forwards;
+      -webkit-animation-fill-mode: forwards;
+      animation-fill-mode: forwards;
    }
-   @-webkit-keyframes contacts{
-      to{
+   @-webkit-keyframes contacts {
+      to {
          -webkit-transform: translate(150vh, 100vh);
-         -moz-transform: translate(0vh,0);
-         -o-transform: translate(0vh,0);
+         -moz-transform: translate(0vh, 0);
+         -o-transform: translate(0vh, 0);
       }
    }
-   @keyframes contacts{
-      to{
+   @keyframes contacts {
+      to {
          -webkit-transform: translate(150vh, 100vh);
-         -moz-transform: translate(0vh,0);
-         -o-transform: translate(0vh,0);
+         -moz-transform: translate(0vh, 0);
+         -o-transform: translate(0vh, 0);
       }
    }
 }
-
-@media (orientation: portrait) and (min-height: 770px){
-   .contacts{
+@media (orientation: portrait) and (min-height: 770px) {
+   .contacts {
       -webkit-box-orient: vertical;
       -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -794,7 +841,7 @@ body {
       -ms-grid-row-align: center;
       align-items: center;
    }
-   .contacts a{
+   .contacts a {
       margin-bottom: 12vh;
    }
 }
