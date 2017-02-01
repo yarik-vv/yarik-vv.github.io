@@ -10,12 +10,6 @@ body {
    background-attachment: fixed;
 }
 
-h1,h2,h3{
-   font-weight: 400;
-   margin: 0;
-   padding: 0;
-}
-
 .main {
    position: relative;
    top: -20vh;
@@ -510,7 +504,7 @@ h1,h2,h3{
    100%{color: #ffff00;}
 }
 
-@media (hover: none){
+@media (hover: none), (max-width: 1000px), (orientation: portrait){
    .contacts a:hover{
       -webkit-transform: none;
       transform: none;
@@ -535,9 +529,14 @@ h1,h2,h3{
       animation: none;
       font-size: 12vh;
    }
+   .links{
+      left: 0;
+      -webkit-animation: opacity 2s ease-out;
+      animation: opacity 2s ease-out;
+   }
 }
 
-@media (max-width: 1440px){
+@media (max-width: 1440px), (orientation: landscape) and (min-width: 1440px){
    .name{
       font-size: 12;
    }
@@ -602,6 +601,28 @@ h1,h2,h3{
    .contacts a{
       margin-bottom: 12vh;
    }
+   .contacts{
+      top: -100vh;
+      left: -150vh;
+      -webkit-animation: contacts 2.4s ease-out, opacity 2.2s ease-out;
+      animation: contacts 2.4s ease-out, opacity 2.2s ease-out;
+      -webkit-animation-fill-mode:forwards;
+      animation-fill-mode:forwards;
+   }
+   @-webkit-keyframes contacts{
+      to{
+         -webkit-transform: translate(150vh, 114vh);
+         -moz-transform: translate(0vh,0);
+         -o-transform: translate(0vh,0);
+      }
+   }
+   @keyframes contacts{
+      to{
+         -webkit-transform: translate(150vh, 114vh);
+         -moz-transform: translate(0vh,0);
+         -o-transform: translate(0vh,0);
+      }
+   }
 }
 
 @media (max-width: 619px), (orientation: portrait){
@@ -645,9 +666,11 @@ h1,h2,h3{
    .links a{
       margin: 1vh;
    }
+/*
    .contacts{
       top: 52vh;
    }
+*/
    .contacts a{
       font-size: 5.5vh;
    }
@@ -670,6 +693,28 @@ h1,h2,h3{
          -webkit-transform: translate(0,26vh);
          -moz-transform: translate(0,26vh);
          -o-transform: translate(0,26vh);
+      }
+   }
+   .contacts{
+      top: -100vh;
+      left: -150vh;
+      -webkit-animation: contacts 2.4s ease-out, opacity 2.2s ease-out;
+      animation: contacts 2.4s ease-out, opacity 2.2s ease-out;
+      -webkit-animation-fill-mode:forwards;
+      animation-fill-mode:forwards;
+   }
+   @-webkit-keyframes contacts{
+      to{
+         -webkit-transform: translate(150vh, 100vh);
+         -moz-transform: translate(0vh,0);
+         -o-transform: translate(0vh,0);
+      }
+   }
+   @keyframes contacts{
+      to{
+         -webkit-transform: translate(150vh, 100vh);
+         -moz-transform: translate(0vh,0);
+         -o-transform: translate(0vh,0);
       }
    }
 }
