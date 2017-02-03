@@ -1,6 +1,26 @@
+/*---fonts---*/
+@font-face {
+   font-family: 'Athiti';
+   src: url("../fonts/Athiti.woff2") format("woff2"), url("../fonts/Athiti.woff") format("woff");
+   font-style: normal;
+   font-weight: 400;
+}
+@font-face {
+   font-family: 'Bubbler One';
+   src: url("../fonts/BubblerOne.woff2") format("woff2"), url("../fonts/BubblerOne.woff") format("woff");
+   font-style: normal;
+   font-weight: 400;
+}
+@font-face {
+   font-family: 'Ubuntu';
+   src: url("../fonts/Ubuntu.woff2") format("woff2"), url("../fonts/Ubuntu.woff") format("woff");
+   font-style: normal;
+   font-weight: 400;
+}
+/*---icons---*/
 @font-face {
    font-family: "socicon";
-   src: url("../icon.woff2") format("woff2"), url("../icon.woff") format("woff");
+   src: url("../fonts/icon.woff2") format("woff2"), url("../fonts/icon.woff") format("woff");
    font-weight: normal;
    font-style: normal;
 }
@@ -52,22 +72,21 @@
 .socicon-instagram:before {
    content: "\e057";
 }
-/*icon*/
-
+/*---styles---*/
 html {
    overflow: hidden;
 }
 body {
    margin: 0;
    height: 100vh;
-   background: url("../background.jpg");
+   background: url("../background.jpg") center fixed;
    background-size: cover;
-   background-attachment: fixed;
 }
 .main {
    position: relative;
    top: -20vh;
    color: white;
+
    display: -webkit-box;
    display: -ms-flexbox;
    display: flex;
@@ -78,6 +97,7 @@ body {
    -webkit-box-pack: center;
    -ms-flex-pack: center;
    justify-content: center;
+
    -webkit-animation: name 1s linear 0.5s;
    animation: name 1s linear 0.5s;
    -webkit-animation-fill-mode: forwards;
@@ -100,6 +120,7 @@ body {
 .name {
    font-family: 'Ubuntu', sans-serif;
    font-size: 13vh;
+
    display: -webkit-box;
    display: -ms-flexbox;
    display: flex;
@@ -111,8 +132,8 @@ body {
    -ms-flex-pack: center;
    justify-content: center;
 }
-.name:nth-child(2) {
-   text-indent: 3vh;
+.name :nth-child(2) {
+   text-indent: 2vh;
 }
 .name p {
    padding: 0;
@@ -123,6 +144,7 @@ body {
    left: -43vh;
    font-family: 'Bubbler One', sans-serif;
    font-size: 5vh;
+
    display: -webkit-box;
    display: -ms-flexbox;
    display: flex;
@@ -133,6 +155,7 @@ body {
    -webkit-box-pack: center;
    -ms-flex-pack: center;
    justify-content: center;
+
    -webkit-animation: develop 1.5s linear 0.8s, opacity 2s ease-out;
    animation: develop 1.5s linear 0.8s, opacity 2s ease-out;
    -webkit-animation-fill-mode: forwards;
@@ -175,38 +198,24 @@ body {
    }
 }
 @-webkit-keyframes opacity {
-   0% {
-      opacity: 0;
-   }
-   80% {
-      opacity: 0;
-   }
-   90% {
-      opacity: 0.50;
-   }
-   100% {
-      opacity: 1;
-   }
+   0% {opacity: 0;}
+   80% {opacity: 0;}
+   90% {opacity: 0.50;}
+   100% {opacity: 1;}
 }
 @keyframes opacity {
-   0% {
-      opacity: 0;
-   }
-   80% {
-      opacity: 0;
-   }
-   90% {
-      opacity: 0.50;
-   }
-   100% {
-      opacity: 1;
-   }
+   0% {opacity: 0;}
+   80% {opacity: 0;}
+   90% {opacity: 0.50;}
+   100% {opacity: 1;}
 }
+
 .links {
    position: relative;
    top: 20vh;
    left: 140vh;
    height: 20vh;
+
    display: -webkit-box;
    display: -ms-flexbox;
    display: flex;
@@ -216,6 +225,7 @@ body {
    -webkit-box-align: center;
    -ms-flex-align: center;
    align-items: center;
+
    -webkit-animation: links 1.5s linear 0.8s, opacity 2s ease-out;
    animation: links 1.5s linear 0.8s, opacity 2s ease-out;
    -webkit-animation-fill-mode: forwards;
@@ -311,12 +321,141 @@ body {
       transform: translateX(0);
    }
 }
+.socicon-linkedin {
+   position: relative;
+   top: -1vh;
+   font-size: 11vh;
+   color: #00a0dc;
+}
+.socicon-linkedin:hover {
+   font-size: 15vh;
+   -webkit-animation: 3s linkedin linear;
+   animation: 3s linkedin linear;
+   -webkit-animation-iteration-count: infinite;
+   animation-iteration-count: infinite;
+}
+@-webkit-keyframes linkedin {
+   0% {color: #00a0dc;}
+   25% {color: #6e5494;}
+   50% {color: #00FF33;}
+   75% {color: #ffff00;}
+   100% {color: #e1306c;}
+}
+@keyframes linkedin {
+   0% {color: #00a0dc;}
+   25% {color: #6e5494;}
+   50% {color: #00FF33;}
+   75% {color: #ffff00;}
+   100% {color: #e1306c;}
+}
+.socicon-github {
+   color: #6e5494;
+}
+.socicon-github:hover {
+   font-size: 13vh;
+   -webkit-animation: 3s github linear;
+   animation: 3s github linear;
+   -webkit-animation-iteration-count: infinite;
+   animation-iteration-count: infinite;
+}
+@-webkit-keyframes github {
+   0% {color: #6e5494;}
+   25% {color: #00FF33;}
+   50% {color: #ffff00;}
+   75% {color: #e1306c;}
+   100% {color: #00a0dc;}
+}
+@keyframes github {
+   0% {color: #6e5494;}
+   25% {color: #00FF33;}
+   50% {color: #ffff00;}
+   75% {color: #e1306c;}
+   100% {color: #00a0dc;}
+}
+.socicon-telegram {
+   color: #00FF33;
+}
+.socicon-telegram:hover {
+   font-size: 13vh;
+   -webkit-animation: 3s telegram linear;
+   animation: 3s telegram linear;
+   -webkit-animation-iteration-count: infinite;
+   animation-iteration-count: infinite;
+}
+@-webkit-keyframes telegram {
+   0% {color: #00FF33;}
+   25% {color: #ffff00;}
+   50% {color: #e1306c;}
+   75% {color: #00a0dc;}
+   100% {color: #6e5494;}
+}
+@keyframes telegram {
+   0% {color: #00FF33;}
+   25% {color: #ffff00;}
+   50% {color: #e1306c;}
+   75% {color: #00a0dc;}
+   100% {color: #6e5494;}
+}
+.socicon-vkontakte {
+   position: relative;
+   top: 1vh;
+   color: #ffff00;
+   font-size: 12vh;
+}
+.socicon-vkontakte:hover {
+   font-size: 18vh;
+   -webkit-animation: 3s vkontakte linear;
+   animation: 3s vkontakte linear;
+   -webkit-animation-iteration-count: infinite;
+   animation-iteration-count: infinite;
+}
+@-webkit-keyframes vkontakte {
+   0% {color: #ffff00;}
+   25% {color: #e1306c;}
+   50% {color: #00a0dc;}
+   75% {color: #6e5494;}
+   100% {color: #00FF33;}
+}
+@keyframes vkontakte {
+   0% {color: #ffff00;}
+   25% {color: #e1306c;}
+   50% {color: #00a0dc;}
+   75% {color: #6e5494;}
+   100% {color: #00FF33;}
+}
+.socicon-instagram {
+   position: relative;
+   top: 0.3vh;
+   color: #e1306c;
+}
+.socicon-instagram:hover {
+   font-size: 13vh;
+   -webkit-animation: 3s instagram linear;
+   animation: 3s instagram linear;
+   -webkit-animation-iteration-count: infinite;
+   animation-iteration-count: infinite;
+}
+@-webkit-keyframes instagram {
+   0% {color: #e1306c;}
+   25% {color: #00a0dc;}
+   50% {color: #6e5494;}
+   75% {color: #00FF33;}
+   100% {color: #ffff00;}
+}
+@keyframes instagram {
+   0% {color: #e1306c;}
+   25% {color: #00a0dc;}
+   50% {color: #6e5494;}
+   75% {color: #00FF33;}
+   100% {color: #ffff00;}
+}
+
 .contacts {
    position: relative;
    top: 67vh;
-   height: 20vh;
    font-size: 6vh;
    font-family: 'Athiti', sans-serif;
+
    display: -webkit-box;
    display: -ms-flexbox;
    display: flex;
@@ -327,6 +466,7 @@ body {
    -webkit-box-pack: center;
    -ms-flex-pack: center;
    justify-content: center;
+
    -webkit-animation: contacts 1s linear 0.5s;
    animation: contacts 1s linear 0.5s;
    -webkit-animation-fill-mode: forwards;
@@ -347,9 +487,11 @@ body {
    }
 }
 .contacts a {
-   margin: 3vh;
+   margin-left: 4vh;
+   margin-right: 4vh;
    text-decoration: none;
    color: white;
+
    display: -webkit-box;
    display: -ms-flexbox;
    display: flex;
@@ -357,6 +499,7 @@ body {
    -webkit-box-direction: normal;
    -ms-flex-direction: column;
    flex-direction: column;
+
    -webkit-transition: all 0.5s ease;
    transition: all 0.5s ease;
 }
@@ -379,245 +522,20 @@ body {
    justify-content: center;
 }
 .contacts a div p {
+   text-indent: 0.5vh;
+}
+.contacts a p,
+.contacts a span{
+   padding: 0;
+   margin: 0;
+   height: 6.5vh;
+}
+.contacts span{
    position: relative;
-   text-indent: 1vh;
-   top: -6.5vh;
+   top: 0.9vh;
 }
-.socicon-mail {
-   position: relative;
-   top: 0.5vh;
-}
-.socicon-linkedin {
-   position: relative;
-   top: -1vh;
-   font-size: 11vh;
-   color: #00a0dc;
-}
-.socicon-linkedin:hover {
-   font-size: 15vh;
-   -webkit-animation: 3s linkedin linear;
-   animation: 3s linkedin linear;
-   -webkit-animation-iteration-count: infinite;
-   animation-iteration-count: infinite;
-}
-@-webkit-keyframes linkedin {
-   0% {
-      color: #00a0dc;
-   }
-   25% {
-      color: #6e5494;
-   }
-   50% {
-      color: #00FF33;
-   }
-   75% {
-      color: #ffff00;
-   }
-   100% {
-      color: #e1306c;
-   }
-}
-@keyframes linkedin {
-   0% {
-      color: #00a0dc;
-   }
-   25% {
-      color: #6e5494;
-   }
-   50% {
-      color: #00FF33;
-   }
-   75% {
-      color: #ffff00;
-   }
-   100% {
-      color: #e1306c;
-   }
-}
-.socicon-github {
-   color: #6e5494;
-}
-.socicon-github:hover {
-   font-size: 13vh;
-   -webkit-animation: 3s github linear;
-   animation: 3s github linear;
-   -webkit-animation-iteration-count: infinite;
-   animation-iteration-count: infinite;
-}
-@-webkit-keyframes github {
-   0% {
-      color: #6e5494;
-   }
-   25% {
-      color: #00FF33;
-   }
-   50% {
-      color: #ffff00;
-   }
-   75% {
-      color: #e1306c;
-   }
-   100% {
-      color: #00a0dc;
-   }
-}
-@keyframes github {
-   0% {
-      color: #6e5494;
-   }
-   25% {
-      color: #00FF33;
-   }
-   50% {
-      color: #ffff00;
-   }
-   75% {
-      color: #e1306c;
-   }
-   100% {
-      color: #00a0dc;
-   }
-}
-.socicon-telegram {
-   color: #00FF33;
-}
-.socicon-telegram:hover {
-   font-size: 13vh;
-   -webkit-animation: 3s telegram linear;
-   animation: 3s telegram linear;
-   -webkit-animation-iteration-count: infinite;
-   animation-iteration-count: infinite;
-}
-@-webkit-keyframes telegram {
-   0% {
-      color: #00FF33;
-   }
-   25% {
-      color: #ffff00;
-   }
-   50% {
-      color: #e1306c;
-   }
-   75% {
-      color: #00a0dc;
-   }
-   100% {
-      color: #6e5494;
-   }
-}
-@keyframes telegram {
-   0% {
-      color: #00FF33;
-   }
-   25% {
-      color: #ffff00;
-   }
-   50% {
-      color: #e1306c;
-   }
-   75% {
-      color: #00a0dc;
-   }
-   100% {
-      color: #6e5494;
-   }
-}
-.socicon-vkontakte {
-   position: relative;
-   top: 1vh;
-   color: #ffff00;
-   font-size: 12vh;
-}
-.socicon-vkontakte:hover {
-   font-size: 18vh;
-   -webkit-animation: 3s vkontakte linear;
-   animation: 3s vkontakte linear;
-   -webkit-animation-iteration-count: infinite;
-   animation-iteration-count: infinite;
-}
-@-webkit-keyframes vkontakte {
-   0% {
-      color: #ffff00;
-   }
-   25% {
-      color: #e1306c;
-   }
-   50% {
-      color: #00a0dc;
-   }
-   75% {
-      color: #6e5494;
-   }
-   100% {
-      color: #00FF33;
-   }
-}
-@keyframes vkontakte {
-   0% {
-      color: #ffff00;
-   }
-   25% {
-      color: #e1306c;
-   }
-   50% {
-      color: #00a0dc;
-   }
-   75% {
-      color: #6e5494;
-   }
-   100% {
-      color: #00FF33;
-   }
-}
-.socicon-instagram {
-   position: relative;
-   top: 0.3vh;
-   color: #e1306c;
-}
-.socicon-instagram:hover {
-   font-size: 13vh;
-   -webkit-animation: 3s instagram linear;
-   animation: 3s instagram linear;
-   -webkit-animation-iteration-count: infinite;
-   animation-iteration-count: infinite;
-}
-@-webkit-keyframes instagram {
-   0% {
-      color: #e1306c;
-   }
-   25% {
-      color: #00a0dc;
-   }
-   50% {
-      color: #6e5494;
-   }
-   75% {
-      color: #00FF33;
-   }
-   100% {
-      color: #ffff00;
-   }
-}
-@keyframes instagram {
-   0% {
-      color: #e1306c;
-   }
-   25% {
-      color: #00a0dc;
-   }
-   50% {
-      color: #6e5494;
-   }
-   75% {
-      color: #00FF33;
-   }
-   100% {
-      color: #ffff00;
-   }
-}
-@media (hover: none),
-(max-width: 1000px),
-(orientation: portrait) {
+
+@media (hover: none), (max-width: 1000px), (orientation: portrait) {
    .contacts a:hover {
       -webkit-transform: none;
       transform: none;
@@ -648,28 +566,14 @@ body {
       animation: opacity 2s ease-out;
    }
 }
-@media (max-width: 1440px),
-(orientation: landscape) and (min-width: 1440px) {
-   .name {
-      font-size: 12;
-   }
-   .develop {
-      font-size: 4;
-   }
+
+@media (max-width: 1440px), (orientation: landscape) and (min-width: 1440px) {
    .contacts {
       font-size: 5vh;
    }
-   .contacts span {
-      position: relative;
-      top: -1vh;
-   }
-   .contacts .socicon-mail {
-      position: relative;
-      top: -0.6vh;
-   }
 }
-@media (max-width: 813px),
-(orientation: portrait) {
+
+@media (max-width: 813px), (orientation: portrait) {
    .main {
       -webkit-box-orient: vertical;
       -webkit-box-direction: normal;
@@ -680,7 +584,15 @@ body {
       -ms-grid-row-align: center;
       align-items: center;
    }
+   .name :nth-child(2) {
+      text-indent: 2vh;
+   }
+   .contacts a{
+      margin-left: 2vh;
+      margin-right: 2vh;
+   }
 }
+
 @media (max-width: 770px) {
    @keyframes name {
       to {
@@ -710,17 +622,18 @@ body {
       align-items: center;
       top: 66vh;
    }
-   .contacts a {
-      margin-bottom: 12vh;
-   }
    .contacts {
-      top: -100vh;
+      top: -113vh;
       left: -150vh;
       -webkit-animation: contacts 2.4s ease-out, opacity 2.2s ease-out;
       animation: contacts 2.4s ease-out, opacity 2.2s ease-out;
       -webkit-animation-fill-mode: forwards;
       animation-fill-mode: forwards;
    }
+   .contacts a{
+      margin: 1vh;
+   }
+
    @-webkit-keyframes contacts {
       to {
          -webkit-transform: translate(150vh, 114vh);
@@ -736,10 +649,11 @@ body {
       }
    }
 }
-@media (max-width: 619px),
-(orientation: portrait) {
+
+@media (max-width: 619px), (orientation: portrait) {
    .main {
-      top: -28vh;
+      top: -25vh;
+      margin-bottom: 3.5vh;
    }
    .name {
       -webkit-box-orient: vertical;
@@ -750,6 +664,12 @@ body {
       -ms-flex-align: center;
       -ms-grid-row-align: center;
       align-items: center;
+      font-size: 13vh;
+      text-align: center;
+      line-height: 12vh;
+   }
+   .name :nth-child(2) {
+      text-indent: 0;
    }
    .socicon-github,
    .socicon-telegram,
@@ -759,39 +679,16 @@ body {
    .socicon-linkedin {
       font-size: 10vh;
    }
-   .name {
-      margin: 2vh;
-      text-align: center;
-      line-height: 13vh;
-   }
-   .name:nth-child(2) {
-      text-indent: 0;
-   }
    .develop {
       line-height: 4.5vh;
       font-size: 4.5vh;
-      top: -1vh;
+      margin-top: 1vh;
    }
    .links {
       top: -5vh;
    }
    .links a {
       margin: 1vh;
-   }
-   /*
-   .contacts{
-      top: 52vh;
-   }
-*/
-   .contacts a {
-      font-size: 5.5vh;
-   }
-   .contacts span {
-      top: 0;
-   }
-   .contacts .socicon-mail {
-      position: relative;
-      top: 0.1vh;
    }
    @-webkit-keyframes name {
       to {
@@ -808,7 +705,7 @@ body {
       }
    }
    .contacts {
-      top: -100vh;
+      top: -112vh;
       left: -150vh;
       -webkit-animation: contacts 2.4s ease-out, opacity 2.2s ease-out;
       animation: contacts 2.4s ease-out, opacity 2.2s ease-out;
@@ -830,6 +727,7 @@ body {
       }
    }
 }
+
 @media (orientation: portrait) and (min-height: 770px) {
    .contacts {
       -webkit-box-orient: vertical;
@@ -840,8 +738,5 @@ body {
       -ms-flex-align: center;
       -ms-grid-row-align: center;
       align-items: center;
-   }
-   .contacts a {
-      margin-bottom: 12vh;
    }
 }
