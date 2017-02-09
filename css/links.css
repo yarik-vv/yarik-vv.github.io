@@ -1,0 +1,239 @@
+.links {
+   position: relative;
+   top: 20vh;
+   left: 140vh;
+   height: 20vh;
+
+   display: -webkit-box;
+   display: -ms-flexbox;
+   display: flex;
+   -webkit-box-pack: center;
+   -ms-flex-pack: center;
+   justify-content: center;
+   -webkit-box-align: center;
+   -ms-flex-align: center;
+   align-items: center;
+
+   -webkit-animation: links 1.5s linear 0.8s, opacity 2s ease-out;
+   animation: links 1.5s linear 0.8s, opacity 2s ease-out;
+   -webkit-animation-fill-mode: forwards;
+   animation-fill-mode: forwards;
+}
+@-webkit-keyframes links {
+   0% {
+      -webkit-transform: translate(0, 0);
+      -moz-transform: translate(0, 0);
+      -o-transform: translate(0, 0);
+   }
+   100% {
+      -webkit-transform: translate(-140vh, 0);
+      -moz-transform: translate(-140vh, 0);
+      -o-transform: translate(-140vh, 0);
+   }
+}
+@keyframes links {
+   0% {
+      -webkit-transform: translate(0, 0);
+      -moz-transform: translate(0, 0);
+      -o-transform: translate(0, 0);
+   }
+   100% {
+      -webkit-transform: translate(-140vh, 0);
+      -moz-transform: translate(-140vh, 0);
+      -o-transform: translate(-140vh, 0);
+   }
+}
+.links a {
+   margin: 2vh;
+   margin-top: 0;
+   margin-bottom: 0;
+   font-size: 9vh;
+   text-decoration: none;
+}
+.links a:hover {
+   cursor: pointer;
+   -webkit-animation: vzhuh 0.6s ease;
+   animation: vzhuh 0.6s ease;
+   -webkit-animation-iteration-count: 1;
+   animation-iteration-count: 1;
+}
+@-webkit-keyframes vzhuh {
+   15% {
+      -webkit-transform: translateX(9px);
+      transform: translateX(9px);
+   }
+   30% {
+      -webkit-transform: translateX(-9px);
+      transform: translateX(-9px);
+   }
+   40% {
+      -webkit-transform: translateX(6px);
+      transform: translateX(6px);
+   }
+   50% {
+      -webkit-transform: translateX(-6px);
+      transform: translateX(-6px);
+   }
+   65% {
+      -webkit-transform: translateX(3px);
+      transform: translateX(3px);
+   }
+   100% {
+      -webkit-transform: translateX(0);
+      transform: translateX(0);
+   }
+}
+@keyframes vzhuh {
+   15% {
+      -webkit-transform: translateX(9px);
+      transform: translateX(9px);
+   }
+   30% {
+      -webkit-transform: translateX(-9px);
+      transform: translateX(-9px);
+   }
+   40% {
+      -webkit-transform: translateX(6px);
+      transform: translateX(6px);
+   }
+   50% {
+      -webkit-transform: translateX(-6px);
+      transform: translateX(-6px);
+   }
+   65% {
+      -webkit-transform: translateX(3px);
+      transform: translateX(3px);
+   }
+   100% {
+      -webkit-transform: translateX(0);
+      transform: translateX(0);
+   }
+}
+.socicon-linkedin {
+   position: relative;
+   top: -1vh;
+   font-size: 11vh;
+   color: #00a0dc;
+}
+.socicon-linkedin:hover {
+   font-size: 15vh;
+   -webkit-animation: 3s linkedin linear;
+   animation: 3s linkedin linear;
+   -webkit-animation-iteration-count: infinite;
+   animation-iteration-count: infinite;
+}
+@-webkit-keyframes linkedin {
+   0% {color: #00a0dc;}
+   25% {color: #6e5494;}
+   50% {color: #00FF33;}
+   75% {color: #ffff00;}
+   100% {color: #e1306c;}
+}
+@keyframes linkedin {
+   0% {color: #00a0dc;}
+   25% {color: #6e5494;}
+   50% {color: #00FF33;}
+   75% {color: #ffff00;}
+   100% {color: #e1306c;}
+}
+.socicon-github {
+   color: #6e5494;
+}
+.socicon-github:hover {
+   font-size: 13vh;
+   -webkit-animation: 3s github linear;
+   animation: 3s github linear;
+   -webkit-animation-iteration-count: infinite;
+   animation-iteration-count: infinite;
+}
+@-webkit-keyframes github {
+   0% {color: #6e5494;}
+   25% {color: #00FF33;}
+   50% {color: #ffff00;}
+   75% {color: #e1306c;}
+   100% {color: #00a0dc;}
+}
+@keyframes github {
+   0% {color: #6e5494;}
+   25% {color: #00FF33;}
+   50% {color: #ffff00;}
+   75% {color: #e1306c;}
+   100% {color: #00a0dc;}
+}
+.socicon-telegram {
+   color: #00FF33;
+}
+.socicon-telegram:hover {
+   font-size: 13vh;
+   -webkit-animation: 3s telegram linear;
+   animation: 3s telegram linear;
+   -webkit-animation-iteration-count: infinite;
+   animation-iteration-count: infinite;
+}
+@-webkit-keyframes telegram {
+   0% {color: #00FF33;}
+   25% {color: #ffff00;}
+   50% {color: #e1306c;}
+   75% {color: #00a0dc;}
+   100% {color: #6e5494;}
+}
+@keyframes telegram {
+   0% {color: #00FF33;}
+   25% {color: #ffff00;}
+   50% {color: #e1306c;}
+   75% {color: #00a0dc;}
+   100% {color: #6e5494;}
+}
+.socicon-vkontakte {
+   position: relative;
+   top: 1vh;
+   color: #ffff00;
+   font-size: 12vh;
+}
+.socicon-vkontakte:hover {
+   font-size: 18vh;
+   -webkit-animation: 3s vkontakte linear;
+   animation: 3s vkontakte linear;
+   -webkit-animation-iteration-count: infinite;
+   animation-iteration-count: infinite;
+}
+@-webkit-keyframes vkontakte {
+   0% {color: #ffff00;}
+   25% {color: #e1306c;}
+   50% {color: #00a0dc;}
+   75% {color: #6e5494;}
+   100% {color: #00FF33;}
+}
+@keyframes vkontakte {
+   0% {color: #ffff00;}
+   25% {color: #e1306c;}
+   50% {color: #00a0dc;}
+   75% {color: #6e5494;}
+   100% {color: #00FF33;}
+}
+.socicon-instagram {
+   position: relative;
+   top: 0.3vh;
+   color: #e1306c;
+}
+.socicon-instagram:hover {
+   font-size: 13vh;
+   -webkit-animation: 3s instagram linear;
+   animation: 3s instagram linear;
+   -webkit-animation-iteration-count: infinite;
+   animation-iteration-count: infinite;
+}
+@-webkit-keyframes instagram {
+   0% {color: #e1306c;}
+   25% {color: #00a0dc;}
+   50% {color: #6e5494;}
+   75% {color: #00FF33;}
+   100% {color: #ffff00;}
+}
+@keyframes instagram {
+   0% {color: #e1306c;}
+   25% {color: #00a0dc;}
+   50% {color: #6e5494;}
+   75% {color: #00FF33;}
+   100% {color: #ffff00;}
+}
