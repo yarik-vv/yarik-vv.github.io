@@ -82,6 +82,11 @@ body {
    background: url("../background.jpg") center fixed;
    background-size: cover;
 }
+.main span,h1,h2{
+   margin: 0;
+   padding: 0;
+   font-weight: 400;
+}
 .main {
    position: relative;
    top: -20vh;
@@ -161,15 +166,15 @@ body {
    -webkit-animation-fill-mode: forwards;
    animation-fill-mode: forwards;
 }
-.develop p {
+.develop span {
    text-indent: 15px;
    margin: 0;
 }
-.develop:nth-child(1) {
+.develop :nth-child(1) {
    position: relative;
    top: 0.3vh;
 }
-.develop:nth-child(2) {
+.develop :nth-child(2) {
    position: relative;
    top: 0.3vh;
 }
