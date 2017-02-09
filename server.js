@@ -1,6 +1,6 @@
 var static = require('node-static');
 var development = new static.Server('./development');
-var prodaction = new static.Server('./');
+var production = new static.Server('./');
 
 require('http').createServer(function (request, response) {
   if (!/\./.test(request.url)) {
@@ -13,5 +13,5 @@ require('http').createServer(function (request, response) {
   if (!/\./.test(request.url)) {
     request.url = '/';
   }
-  prodaction.serve(request, response);
+  production.serve(request, response);
 }).listen(9000);
