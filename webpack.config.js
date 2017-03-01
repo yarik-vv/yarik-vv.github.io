@@ -3,18 +3,18 @@
 const NODE_ENV = process.env.NODE_ENV || 'development';
 const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const StyleExtHtmlWebpackPlugin = require('style-ext-html-webpack-plugin');
 
 module.exports = {
-   context: __dirname + '/Development/assets',
+   context: __dirname + '/Development',
 
-   entry: {
-      index: './index',
-   },
+   entry: './index',
 
    output: {
       path: __dirname + '/Production',
       publicPath: '/',
-      filename: 'index.js',
+      filename: '[name].js'
    },
 
    watch: NODE_ENV == 'development',
@@ -22,8 +22,6 @@ module.exports = {
       aggregateTimeout: 100,
       ignored: /node_modules/
    },
-
-   devtool: NODE_ENV == 'development' ? 'cheap-inline-module-source-map' : false,
 
    resolve: {
       modules: ['node_modules'],
@@ -41,10 +39,9 @@ module.exports = {
       {
          test: /\.css$/,
          include: __dirname + '/Development',
-         use: ExtractTextPlugin.extract(
-            {
+         use: ExtractTextPlugin.extract({
                fallback: 'style',
-               use: [
+               use:[
                   {loader: 'css'},
                   {
                      loader: 'postcss',
@@ -57,7 +54,7 @@ module.exports = {
                      }
                   },
                ]
-            })
+         })
       }, 
       {
          test:   /\.(png|jpg|svg|ttf|eot|woff|woff2)$/,
@@ -75,6 +72,32 @@ module.exports = {
          filename:  'styles.css',
          allChunks: true
       }),
+      new HtmlWebpackPlugin({
+         chunks: ['index'],
+         filename: 'index.html',
+         template: 'template.ejs',
+         minify: {
+            minifyCSS:true,
+            minifyJS:true,
+            useShortDoctype: true,
+            removeAttributeQuotes: true,
+            removeComments:true,
+            collapseWhitespace: true,
+            collapseInlineTagWhitespace: true,
+            collapseBooleanAttributes: true,
+            removeEmptyAttributes: true,
+            caseSensitive: true,
+            sortAttributes: true,
+            sortClassName: true,
+            removeScriptTypeAttributes: true,
+            removeStyleLinkTypeAttributes: true,
+            removeRedundantAttributes: true,
+            keepClosingSlash: true,
+            minifyURLs: true,
+            preventAttributesEscaping: true
+         }
+      }),
+      new StyleExtHtmlWebpackPlugin('styles.css'),
    ],
 
    devServer: {
@@ -109,4 +132,4 @@ if (NODE_ENV == 'production') {
          comments: false
       })
    );
-}
+};
