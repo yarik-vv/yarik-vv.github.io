@@ -5,7 +5,7 @@ const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
-   context: __dirname + '/Development/css',
+   context: __dirname + '/Development/assets',
 
    entry: {
       index: './index',
@@ -27,7 +27,7 @@ module.exports = {
 
    resolve: {
       modules: ['node_modules'],
-      extensions: ['.js']
+      extensions: ['.js', '.css']
    },
 
    resolveLoader: {
