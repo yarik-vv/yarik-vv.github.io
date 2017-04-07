@@ -3,7 +3,7 @@ Page with my contacts and main links.
 
 ## Contacts:
 ```
-- E-mail: message@yarik-vv.info
+- E-mail: yarik_vv@icloud.com
 - Phone: +380665898542
 - Location: Kiev, Ukraine
 ```
