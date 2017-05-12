@@ -68,10 +68,6 @@ module.exports = {
       new webpack.DefinePlugin({
          NODE_ENV: JSON.stringify(NODE_ENV)
       }),
-      new ExtractTextPlugin({
-         filename:  'styles.css',
-         allChunks: true
-      }),
       new HtmlWebpackPlugin({
          chunks: ['index'],
          filename: 'index.html',
@@ -97,7 +93,11 @@ module.exports = {
             preventAttributesEscaping: true
          }
       }),
-      new StyleExtHtmlWebpackPlugin('styles.css'),
+      new ExtractTextPlugin({
+         filename:  'styles.css',
+         allChunks: true
+      }),
+      new StyleExtHtmlWebpackPlugin('styles.css')
    ],
 
    devServer: {
