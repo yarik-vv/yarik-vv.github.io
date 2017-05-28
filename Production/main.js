@@ -96,8 +96,8 @@ module.exports = __webpack_require__.p + "img/favicon.png";
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__css_main__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__css_main___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__css_main__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__css_main_scss__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__css_main_scss___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__css_main_scss__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__img_favicon_png__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__img_favicon_png___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__img_favicon_png__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__img_error_png__ = __webpack_require__(2);

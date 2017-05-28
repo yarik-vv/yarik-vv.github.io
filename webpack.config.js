@@ -35,25 +35,23 @@ module.exports = {
    },
 
    module: {
-      rules: [
-      {
-         test: /\.css$/,
+      rules: [{
+         test: /\.scss$/,
          include: __dirname + '/Development',
          use: ExtractTextPlugin.extract({
-               fallback: 'style',
-               use:[
-                  {loader: 'css'},
-                  {
-                     loader: 'postcss',
-                     options: {
-                        plugins: function () {
-                           return [
-                           require('autoprefixer')
-                           ];
-                        }
+            fallback: 'style',
+            use:[
+               {loader: 'css'},
+               {loader: 'sass'},
+               {
+                  loader: 'postcss',
+                  options: {
+                     plugins: () => {
+                        return [require('autoprefixer')];
                      }
-                  },
-               ]
+                  }
+               }
+            ]
          })
       }, 
       {
