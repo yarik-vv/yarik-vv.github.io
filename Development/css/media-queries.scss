@@ -1,31 +1,25 @@
 @media (hover: none), (max-width: 1000px), (orientation: portrait) {
    .contacts a:hover {
-      -webkit-transform: none;
       transform: none;
       color: white;
-      -webkit-animation: vzhuh 0.6s ease;
       animation: vzhuh 0.6s ease;
    }
    .socicon-github:hover,
    .socicon-telegram:hover,
    .socicon-instagram:hover {
-      -webkit-animation: none;
       animation: none;
       font-size: 8vh;
    }
    .socicon-linkedin:hover {
-      -webkit-animation: none;
       animation: none;
       font-size: 10vh;
    }
    .socicon-vkontakte:hover {
-      -webkit-animation: none;
       animation: none;
       font-size: 12vh;
    }
    .links {
       left: 0;
-      -webkit-animation: opacity 2s ease-out;
       animation: opacity 2s ease-out;
    }
 }
@@ -37,14 +31,8 @@
 }
 
 @media (max-width: 813px), (orientation: portrait) {
-   .main {
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-      -ms-flex-direction: column;
+   .main {;
       flex-direction: column;
-      -webkit-box-align: center;
-      -ms-flex-align: center;
-      -ms-grid-row-align: center;
       align-items: center;
    }
    .name :nth-child(2) {
@@ -64,46 +52,25 @@
          -o-transform: translate(0, 30vh);
       }
    }
-   @-webkit-keyframes name {
-      to {
-         -webkit-transform: translate(0, 30vh);
-         -moz-transform: translate(0, 30vh);
-         -o-transform: translate(0, 30vh);
-      }
-   }
    .links {
       top: 8vh;
    }
    .contacts {
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-      -ms-flex-direction: column;
       flex-direction: column;
-      -webkit-box-align: center;
-      -ms-flex-align: center;
-      -ms-grid-row-align: center;
       align-items: center;
       top: 66vh;
    }
    .contacts {
       top: -113vh;
       left: -150vh;
-      -webkit-animation: contacts 2.4s ease-out, opacity 2.2s ease-out;
       animation: contacts 2.4s ease-out, opacity 2.2s ease-out;
-      -webkit-animation-fill-mode: forwards;
       animation-fill-mode: forwards;
    }
    .contacts a{
       margin: 1vh;
    }
 
-   @-webkit-keyframes contacts {
-      to {
-         -webkit-transform: translate(150vh, 114vh);
-         -moz-transform: translate(150vh, 114vh);
-         -o-transform: translate(150vh, 114vh);
-      }
-   }
+
    @keyframes contacts {
       to {
          -webkit-transform: translate(150vh, 114vh);
@@ -119,13 +86,7 @@
       margin-bottom: 3.5vh;
    }
    .name {
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-      -ms-flex-direction: column;
       flex-direction: column;
-      -webkit-box-align: center;
-      -ms-flex-align: center;
-      -ms-grid-row-align: center;
       align-items: center;
       font-size: 13vh;
       text-align: center;
@@ -153,13 +114,7 @@
    .links a {
       margin: 1vh;
    }
-   @-webkit-keyframes name {
-      to {
-         -webkit-transform: translate(0, 26vh);
-         -moz-transform: translate(0, 26vh);
-         -o-transform: translate(0, 26vh);
-      }
-   }
+
    @keyframes name {
       to {
          -webkit-transform: translate(0, 26vh);
@@ -170,18 +125,10 @@
    .contacts {
       top: -112vh;
       left: -150vh;
-      -webkit-animation: contacts 2.4s ease-out, opacity 2.2s ease-out;
       animation: contacts 2.4s ease-out, opacity 2.2s ease-out;
-      -webkit-animation-fill-mode: forwards;
       animation-fill-mode: forwards;
    }
-   @-webkit-keyframes contacts {
-      to {
-         -webkit-transform: translate(150vh, 100vh);
-         -moz-transform: translate(150vh, 100vh);
-         -o-transform: translate(150vh, 100vh);
-      }
-   }
+
    @keyframes contacts {
       to {
          -webkit-transform: translate(150vh, 100vh);
@@ -193,13 +140,7 @@
 
 @media (orientation: portrait) and (min-height: 770px) {
    .contacts {
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-      -ms-flex-direction: column;
       flex-direction: column;
-      -webkit-box-align: center;
-      -ms-flex-align: center;
-      -ms-grid-row-align: center;
       align-items: center;
    }
 }
