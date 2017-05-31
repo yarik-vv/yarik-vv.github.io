@@ -95,7 +95,7 @@ module.exports = {
          filename:  'styles.css',
          allChunks: true
       }),
-      new StyleExtHtmlWebpackPlugin('styles.css')
+      //new StyleExtHtmlWebpackPlugin('styles.css')
    ],
 
    devServer: {
