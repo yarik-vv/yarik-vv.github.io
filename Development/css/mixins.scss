@@ -1,6 +1,14 @@
 @mixin flex($direction: row, $justify-content: center, $align-items: center){
-  display: flex;
-  flex-direction: $direction;
-  justify-content: $justify-content;
-  align-items: $align-items;
+   display: flex;
+   flex-direction: $direction;
+   justify-content: $justify-content;
+   align-items: $align-items;
+}
+
+@mixin font($name, $woff, $woff2){
+   font-family: $name;
+   src: url($woff2) format('woff2'), 
+        url($woff) format('woff');
+   font-style: normal;
+   font-weight: 400;
 }
