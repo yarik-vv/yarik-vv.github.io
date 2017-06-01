@@ -1,10 +1,5 @@
-@font-face {
-   font-family: "socicon";
-   src: url("../fonts/icon.woff2") format("woff2"), 
-        url("../fonts/icon.woff") format("woff");
-   font-weight: normal;
-   font-style: normal;
-}
+@include font('socicon', '../fonts/icon.woff2', '../fonts/icon.woff');
+
 [data-socicon]:before {
    font-family: "socicon" !important;
    content: attr(data-socicon);
@@ -17,6 +12,7 @@
    -webkit-font-smoothing: antialiased;
    -moz-osx-font-smoothing: grayscale;
 }
+
 [class^="socicon-"]:before,
 [class*=" socicon-"]:before {
    font-family: "socicon" !important;
@@ -29,6 +25,7 @@
    -webkit-font-smoothing: antialiased;
    -moz-osx-font-smoothing: grayscale;
 }
+
 .socicon-periscope:before {
    content: "\e00f";
 }
