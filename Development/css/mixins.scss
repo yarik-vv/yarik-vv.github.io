@@ -1,4 +1,4 @@
-@mixin flex($direction: row, $justify-content: flex-start, $align-items: flex-start){
+@mixin flex($justify-content: flex-start, $direction: row, $align-items: flex-start){
    display: flex;
    flex-direction: $direction;
    justify-content: $justify-content;
@@ -21,4 +21,13 @@
    50%  {color: $color3;}
    75%  {color: $color4;}
    100% {color: $color5;}
+}
+
+@mixin translate($fromX, $fromY, $toX, $toY){
+   from {
+      transform: translate($fromX, $fromY);
+   }
+   to {
+      transform: translate($toX, $toY);
+   }
 }

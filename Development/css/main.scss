@@ -1,9 +1,31 @@
+@import 'variables';
 @import 'mixins';
-@import "fonts.scss";
-@import "icons.scss";
+@import 'fonts';
+@import 'icons';
+
+html {
+   overflow: hidden;
+}
+
+*{
+   margin: 0;
+   padding: 0;
+   font-weight: 400;
+}
+
+body {
+   background: $background;
+   background-size: cover;
+}
+
+@import 'name-box';
+
 /*
-@import "name-box.css";
-@import "links.css";
-@import "contacts.css";
-@import "media-queries.css"; 
+@import "links.scss";
+@import "contacts.scss";
+@import "media-queries.scss"; 
 */
+
+@import "links.scss";
+@import "contacts.scss";
+@import "media-queries.scss";

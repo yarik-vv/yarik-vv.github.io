@@ -1,48 +1,23 @@
-html {
-   overflow: hidden;
-}
-
-*{
-   margin: 0;
-   padding: 0;
-   font-weight: 400;
-}
-
-body {
-   //height: 100vh;
-   background: url("../img/background.jpg") center fixed;
-   background-size: cover;
-}
-
 .main {
    position: relative;
    top: -20vh;
-   color: white;
+   color: $primary-color;
 
-
-   display: flex;
-   flex-direction: row;
-   justify-content: center;
+   @include flex(center);
 
    animation: name 1s linear 0.5s;
    animation-fill-mode: forwards;
 }
 
 @keyframes name {
-   to {
-      -webkit-transform: translate(0, 40vh);
-      -moz-transform: translate(0, 40vh);
-      -o-transform: translate(0, 40vh);
-   }
+   @include translate(0, 0, 0, 40vh);
 }
 
 .name {
-   font-family: 'Ubuntu', sans-serif;
+   font-family: $bold-font;
    font-size: 13vh;
 
-   display: flex;
-   flex-direction: row;
-   justify-content: center;
+   @include flex(center);
 }
 
 .name :nth-child(2) {
@@ -57,12 +32,11 @@ body {
 .develop {
    position: relative;
    left: -43vh;
-   font-family: 'Bubbler One', sans-serif;
+   top: 1.5vh;
+   font-family: $secondary-font;
    font-size: 5vh;
 
-   display: flex;
-   flex-direction: column;
-   justify-content: center;
+   @include flex(center, column);
 
    animation: develop 1.5s linear 0.8s, opacity 2s ease-out;
    animation-fill-mode: forwards;
@@ -77,22 +51,14 @@ body {
    position: relative;
    top: 0.3vh;
 }
+
 .develop :nth-child(2) {
    position: relative;
    top: 0.3vh;
 }
 
 @keyframes develop {
-   from {
-      -webkit-transform: translate(0, 0);
-      -moz-transform: translate(0, 0);
-      -o-transform: translate(0, 0);
-   }
-   to {
-      -webkit-transform: translate(43vh, 0);
-      -moz-transform: translate(43vh, 0);
-      -o-transform: translate(43vh, 0);
-   }
+   @include translate(0, 0, 43vh, 0);
 }
 
 @keyframes opacity {
