@@ -1,33 +1,18 @@
+@mixin font($font-name, $woff2, $woff){
+   @font-face {
+      src: url($woff2) format('woff2'), 
+           url($woff) format('woff');
+      font: {
+         family: $font-name;
+         style: normal;
+         weight: normal;
+      }
+   }
+}
+
 @mixin flex($justify-content: flex-start, $direction: row, $align-items: flex-start){
    display: flex;
    flex-direction: $direction;
    justify-content: $justify-content;
    align-items: $align-items;
-}
-
-@mixin font($name, $woff2, $woff){
-   @font-face {
-      font-family: $name;
-      src: url($woff2) format('woff2'), 
-         url($woff) format('woff');
-      font-style: normal;
-      font-weight: normal;
-   }
-}
-
-@mixin links-animation($color1, $color2, $color3, $color4, $color5) {
-   0%   {color: $color1;}
-   25%  {color: $color2;}
-   50%  {color: $color3;}
-   75%  {color: $color4;}
-   100% {color: $color5;}
-}
-
-@mixin translate($fromX, $fromY, $toX, $toY){
-   from {
-      transform: translate($fromX, $fromY);
-   }
-   to {
-      transform: translate($toX, $toY);
-   }
 }
