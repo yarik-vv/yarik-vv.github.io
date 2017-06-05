@@ -16,3 +16,12 @@
    justify-content: $justify-content;
    align-items: $align-items;
 }
+
+@mixin primary-animation($fromX, $fromY, $toX, $toY){
+   from {
+      transform: translate($fromX, $fromY);
+   }
+   to {
+      transform: translate($toX, $toY);
+   }
+}
