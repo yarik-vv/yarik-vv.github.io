@@ -1,9 +1,9 @@
 .main {
+   @include flex(center);
+
    position: relative;
    top: -20vh;
    color: $primary-color;
-
-   @include flex(center);
 
    animation: name 1s linear 0.5s;
    animation-fill-mode: forwards;
@@ -14,47 +14,36 @@
 }
 
 .name {
-   font-family: $bold-font;
-   font-size: 13vh;
-
    @include flex(center);
-}
+   
+   font: {
+      family: $bold-font;
+      size: 13vh;
+   }
 
-.name :nth-child(2) {
-   text-indent: 2vh;
-}
-
-.name p {
-   padding: 0;
-   margin: 0;
+   & :nth-child(2) {
+      text-indent: 2vh;
+   }
 }
 
 .develop {
+   @include flex(center, column);
+
    position: relative;
    left: -43vh;
-   top: 1.5vh;
-   font-family: $secondary-font;
-   font-size: 5vh;
+   top: 1.7vh;
 
-   @include flex(center, column);
+   font: {
+      family: $secondary-font;
+      size: 5vh;
+   }
 
    animation: develop 1.5s linear 0.8s, opacity 2s ease-out;
    animation-fill-mode: forwards;
-}
 
-.develop span {
-   text-indent: 15px;
-   margin: 0;
-}
-
-.develop :nth-child(1) {
-   position: relative;
-   top: 0.3vh;
-}
-
-.develop :nth-child(2) {
-   position: relative;
-   top: 0.3vh;
+   span {
+      text-indent: 15px;
+   }
 }
 
 @keyframes develop {
@@ -62,8 +51,8 @@
 }
 
 @keyframes opacity {
-   0% {opacity: 0;}
-   80% {opacity: 0;}
-   90% {opacity: 0.50;}
+   0%   {opacity: 0;}
+   80%  {opacity: 0;}
+   90%  {opacity: 0.50;}
    100% {opacity: 1;}
 }
