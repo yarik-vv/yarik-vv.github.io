@@ -25,7 +25,7 @@ module.exports = {
 
    resolve: {
       modules: ['node_modules'],
-      extensions: ['.js', '.css']
+      extensions: ['.js']
    },
 
    resolveLoader: {

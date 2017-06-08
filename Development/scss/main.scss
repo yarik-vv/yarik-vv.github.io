@@ -7,7 +7,7 @@ html {
    overflow: hidden;
 }
 
-*{
+* {
    margin: 0;
    padding: 0;
    font-weight: 400;
@@ -21,18 +21,4 @@ body {
 @import 'name-box';
 @import "links.scss";
 @import "contacts.scss";
-
 @import "media-queries.scss"; 
-/*
-@import 'fonts';
-@import 'icons';
-
-@import 'name-box';
-@import "links.scss";
-
-
-@import "contacts.scss";
-@import "media-queries.scss"; 
-*/
-
-

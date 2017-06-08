@@ -32,7 +32,7 @@
 
 @media (max-width: 813px), (orientation: portrait) {
    .main {
-      @include flex(none, column, center);
+      @include flex(flex-start, column, center);
       //flex-direction: column;
       //align-items: center;
    }
@@ -60,7 +60,7 @@
    }
 
    .contacts {
-      @include flex(none, column, center);
+      @include flex(flex-start, column, center);
 
       top: -113vh;
       left: -150vh;
@@ -90,7 +90,7 @@
       margin-bottom: 3.5vh;
    }
    .name {
-      @include flex(none, column, center);
+      @include flex(flex-start, column, center);
       //flex-direction: column;
       //align-items: center;
 
@@ -154,7 +154,7 @@
 
 @media (orientation: portrait) and (min-height: 770px) {
    .contacts {
-      @include flex(none, column, center);
+      @include flex(flex-start, column, center);
       // flex-direction: column;
       // align-items: center;
    }

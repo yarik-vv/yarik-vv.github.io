@@ -350,7 +350,7 @@ body {
   .main {
     display: flex;
     flex-direction: column;
-    justify-content: none;
+    justify-content: flex-start;
     align-items: center; }
   .name :nth-child(2) {
     text-indent: 2vh; }
@@ -368,7 +368,7 @@ body {
   .contacts {
     display: flex;
     flex-direction: column;
-    justify-content: none;
+    justify-content: flex-start;
     align-items: center;
     top: -113vh;
     left: -150vh;
@@ -389,7 +389,7 @@ body {
   .name {
     display: flex;
     flex-direction: column;
-    justify-content: none;
+    justify-content: flex-start;
     align-items: center;
     font-size: 13vh;
     text-align: center;
@@ -430,17 +430,5 @@ body {
   .contacts {
     display: flex;
     flex-direction: column;
-    justify-content: none;
+    justify-content: flex-start;
     align-items: center; } }
-
-/*
-@import 'fonts';
-@import 'icons';
-
-@import 'name-box';
-@import "links.scss";
-
-
-@import "contacts.scss";
-@import "media-queries.scss"; 
-*/
