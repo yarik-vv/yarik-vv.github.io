@@ -325,18 +325,18 @@ body {
 @media (hover: none), (max-width: 1000px), (orientation: portrait) {
   .contacts a:hover {
     transform: none;
-    color: white;
+    color: #ffffff;
     animation: vzhuh 0.6s ease; }
+  .socicon-linkedin:hover,
   .socicon-github:hover,
   .socicon-telegram:hover,
-  .socicon-instagram:hover {
+  .socicon-instagram:hover,
+  .socicon-vkontakte:hover {
     animation: none;
     font-size: 8vh; }
   .socicon-linkedin:hover {
-    animation: none;
     font-size: 10vh; }
   .socicon-vkontakte:hover {
-    animation: none;
     font-size: 12vh; }
   .links {
     left: 0;
@@ -348,51 +348,54 @@ body {
 
 @media (max-width: 813px), (orientation: portrait) {
   .main {
+    display: flex;
     flex-direction: column;
+    justify-content: none;
     align-items: center; }
   .name :nth-child(2) {
     text-indent: 2vh; }
   .contacts a {
-    margin-left: 2vh;
-    margin-right: 2vh; } }
+    margin: 0 2vh 0 2vh; } }
 
 @media (max-width: 770px) {
   @keyframes name {
+    from {
+      transform: translate(0, 0); }
     to {
-      -webkit-transform: translate(0, 30vh);
-      -moz-transform: translate(0, 30vh);
-      -o-transform: translate(0, 30vh); } }
+      transform: translate(0, 30vh); } }
   .links {
     top: 8vh; }
   .contacts {
+    display: flex;
     flex-direction: column;
+    justify-content: none;
     align-items: center;
-    top: 66vh; }
-  .contacts {
     top: -113vh;
     left: -150vh;
     animation: contacts 2.4s ease-out, opacity 2.2s ease-out;
     animation-fill-mode: forwards; }
-  .contacts a {
-    margin: 1vh; }
+    .contacts a {
+      margin: 1vh; }
   @keyframes contacts {
+    from {
+      transform: translate(0, 0); }
     to {
-      -webkit-transform: translate(150vh, 114vh);
-      -moz-transform: translate(150vh, 114vh);
-      -o-transform: translate(150vh, 114vh); } } }
+      transform: translate(150vh, 114vh); } } }
 
 @media (max-width: 619px), (orientation: portrait) {
   .main {
     top: -25vh;
     margin-bottom: 3.5vh; }
   .name {
+    display: flex;
     flex-direction: column;
+    justify-content: none;
     align-items: center;
     font-size: 13vh;
     text-align: center;
     line-height: 12vh; }
-  .name :nth-child(2) {
-    text-indent: 0; }
+    .name :nth-child(2) {
+      text-indent: 0; }
   .socicon-github,
   .socicon-telegram,
   .socicon-instagram {
@@ -405,27 +408,29 @@ body {
     margin-top: 1vh; }
   .links {
     top: -5vh; }
-  .links a {
-    margin: 1vh; }
+    .links a {
+      margin: 1vh; }
   @keyframes name {
+    from {
+      transform: translate(0, 0); }
     to {
-      -webkit-transform: translate(0, 26vh);
-      -moz-transform: translate(0, 26vh);
-      -o-transform: translate(0, 26vh); } }
+      transform: translate(0, 26vh); } }
   .contacts {
     top: -112vh;
     left: -150vh;
     animation: contacts 2.4s ease-out, opacity 2.2s ease-out;
     animation-fill-mode: forwards; }
   @keyframes contacts {
+    from {
+      transform: translate(0, 0); }
     to {
-      -webkit-transform: translate(150vh, 100vh);
-      -moz-transform: translate(150vh, 100vh);
-      -o-transform: translate(150vh, 100vh); } } }
+      transform: translate(150vh, 100vh); } } }
 
 @media (orientation: portrait) and (min-height: 770px) {
   .contacts {
+    display: flex;
     flex-direction: column;
+    justify-content: none;
     align-items: center; } }
 
 /*
