@@ -284,53 +284,43 @@ body {
     color: #ffff00; } }
 
 .contacts {
-  position: relative;
-  top: 67vh;
-  font-size: 6vh;
-  font-family: 'Athiti', sans-serif;
   display: flex;
   flex-direction: row;
   justify-content: center;
+  align-items: flex-start;
+  position: relative;
+  top: 67vh;
+  font-size: 6vh;
+  font-family: "Athiti", sans-serif;
   animation: contacts 1s linear 0.5s;
   animation-fill-mode: forwards; }
+  .contacts a {
+    margin: 0 4vh 0 4vh;
+    text-decoration: none;
+    color: #ffffff;
+    transition: all 0.5s ease; }
+    .contacts a:hover {
+      cursor: pointer;
+      color: #000000;
+      transform: rotate(-3deg); }
+    .contacts a div {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: flex-start; }
+      .contacts a div p {
+        text-indent: 0.5vh; }
+    .contacts a p, .contacts a span {
+      height: 6.5vh; }
+  .contacts span {
+    position: relative;
+    top: 0.9vh; }
 
 @keyframes contacts {
+  from {
+    transform: translate(0, 0); }
   to {
-    -webkit-transform: translate(0, -51vh);
-    -moz-transform: translate(0, -51vh);
-    -o-transform: translate(0, -51vh); } }
-
-.contacts a {
-  margin-left: 4vh;
-  margin-right: 4vh;
-  text-decoration: none;
-  color: white;
-  display: flex;
-  flex-direction: column;
-  transition: all 0.5s ease; }
-
-.contacts a:hover {
-  cursor: pointer;
-  color: black;
-  transform: rotate(-3deg); }
-
-.contacts a div {
-  display: flex;
-  flex-direction: row;
-  justify-content: center; }
-
-.contacts a div p {
-  text-indent: 0.5vh; }
-
-.contacts a p,
-.contacts a span {
-  padding: 0;
-  margin: 0;
-  height: 6.5vh; }
-
-.contacts span {
-  position: relative;
-  top: 0.9vh; }
+    transform: translate(0, -51vh); } }
 
 @media (hover: none), (max-width: 1000px), (orientation: portrait) {
   .contacts a:hover {
@@ -443,7 +433,6 @@ body {
 @import 'icons';
 
 @import 'name-box';
-
 @import "links.scss";
 
 

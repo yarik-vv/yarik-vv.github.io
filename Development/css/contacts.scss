@@ -1,60 +1,49 @@
 .contacts {
+   @include flex(center, row);
+
    position: relative;
    top: 67vh;
-   font-size: 6vh;
-   font-family: 'Athiti', sans-serif;
 
-   display: flex;
-   flex-direction: row;
-   justify-content: center;
+   font: {
+      size: 6vh;
+      family: $primary-font;
+   }
 
    animation: contacts 1s linear 0.5s;
    animation-fill-mode: forwards;
-}
+   
+   a {
+      margin: 0 4vh 0 4vh;
 
-@keyframes contacts {
-   to {
-      -webkit-transform: translate(0, -51vh);
-      -moz-transform: translate(0, -51vh);
-      -o-transform: translate(0, -51vh);
+      text-decoration: none;
+      color: $primary-color;
+
+      transition: all 0.5s ease;
+      
+      &:hover {
+         cursor: pointer;
+         color: $secondary-color;
+         transform: rotate(-3deg);
+      }
+      div {
+         @include flex(center,row);
+
+         p {
+            text-indent: 0.5vh;
+         }
+      }
+
+      p, span{
+         height: 6.5vh;
+      }
+   }
+
+   span{
+      position: relative;
+      top: 0.9vh;
    }
 }
 
-.contacts a {
-   margin-left: 4vh;
-   margin-right: 4vh;
-   text-decoration: none;
-   color: white;
-
-   display: flex;
-   flex-direction: column;
-
-   transition: all 0.5s ease;
-}
-.contacts a:hover {
-   cursor: pointer;
-   color: black;
-   transform: rotate(-3deg);
-}
-
-.contacts a div {
-   display: flex;
-   flex-direction: row;
-   justify-content: center;
-}
-
-.contacts a div p {
-   text-indent: 0.5vh;
-}
-
-.contacts a p,
-.contacts a span{
-   padding: 0;
-   margin: 0;
-   height: 6.5vh;
-}
-
-.contacts span{
-   position: relative;
-   top: 0.9vh;
+@keyframes contacts {
+   @include primary-animation(0, 0, 0, -51vh);
 }
