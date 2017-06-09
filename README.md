@@ -8,4 +8,4 @@ Page with my contacts and main links.
 - Location: Kiev, Ukraine
 ```
 ## Links: 
-### [Linkedin](https://www.linkedin.com/in/yarik-vv)---[Telegram](http://telegram.me/yarik_vv)---[VK](https://vk.com/yarik_vv)---[Instagram](https://www.instagram.com/yarik_vv)
+### [&nbsp;[Linkedin](https://www.linkedin.com/in/yarik-vv)&nbsp;]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[&nbsp;[Telegram](http://telegram.me/yarik_vv)&nbsp;]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[&nbsp;[VK](https://vk.com/yarik_vv)&nbsp;]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[&nbsp;[Instagram](https://www.instagram.com/yarik_vv)&nbsp;]
