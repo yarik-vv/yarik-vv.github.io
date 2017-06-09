@@ -5,6 +5,7 @@ const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const StyleExtHtmlWebpackPlugin = require('style-ext-html-webpack-plugin');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 module.exports = {
    context: __dirname + '/Development',
@@ -14,7 +15,7 @@ module.exports = {
    output: {
       path: __dirname + '/Production',
       publicPath: ' ',
-      filename: '[name].js'
+      filename: 'build.js'
    },
 
    watch: NODE_ENV == 'development',
@@ -55,6 +56,7 @@ module.exports = {
       new webpack.DefinePlugin({
          NODE_ENV: JSON.stringify(NODE_ENV)
       }),
+      new CleanWebpackPlugin(__dirname + '/Production/*'),
       new HtmlWebpackPlugin({
          chunks: ['index'],
          filename: 'index.html',
@@ -83,8 +85,7 @@ module.exports = {
       new ExtractTextPlugin({
          filename:  'styles.css',
          allChunks: true
-      }),
-      //new StyleExtHtmlWebpackPlugin('styles.css')
+      })
    ],
 
    devServer: {
@@ -107,6 +108,7 @@ if (NODE_ENV == 'production') {
             'NODE_ENV': JSON.stringify('production')
          }
       }),
+      new StyleExtHtmlWebpackPlugin('styles.css'),
       new webpack.optimize.UglifyJsPlugin({
          beautify: false,
          mangle: {
