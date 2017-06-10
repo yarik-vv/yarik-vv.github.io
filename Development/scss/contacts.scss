@@ -25,22 +25,27 @@
          color: $secondary-color;
          transform: rotate(-3deg);
       }
+      
       div {
          @include flex(center,row);
 
-         p {
-            text-indent: 0.5vh;
+         .icon-mail:before {
+            margin-right: .3em;
+         }
+         .icon-location:before {
+            margin-right: .2em;
+         }
+         .icon-phone:before {
+            font-size: 6.1vh; 
+            position: relative;
+            top: .5vh;
+            margin-right: 0;
          }
       }
 
       p, span{
          height: 6.5vh;
       }
-   }
-
-   span{
-      position: relative;
-      top: 0.9vh;
    }
 }
 
