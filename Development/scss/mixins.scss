@@ -35,6 +35,7 @@
 }
 
 @mixin link-hover($name-link){
+   transition: all .5s ease;
    animation: 3s $name-link linear;
    animation-iteration-count: infinite;
 }

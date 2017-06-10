@@ -17,58 +17,52 @@
   font-weight: normal; }
 
 @font-face {
-  src: url( fonts/icon.woff2) format("woff2"), url( fonts/icon.woff) format("woff");
-  font-family: "socicon";
+  src: url( icons/icons.woff2) format("woff2"), url( icons/icons.woff) format("woff");
+  font-family: "icons";
   font-style: normal;
   font-weight: normal; }
 
-[data-socicon]:before {
-  font-family: "socicon" !important;
-  content: attr(data-socicon);
-  font-style: normal !important;
-  font-weight: normal !important;
-  font-variant: normal !important;
-  text-transform: none !important;
-  speak: none;
-  line-height: 1;
+[class^='icon-']:before, [class*=' icon-']:before {
+  font-family: 'icons';
+  font-style: normal;
+  font-weight: normal;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
-[class^="socicon-"]:before,
-[class*=" socicon-"]:before {
-  font-family: "socicon" !important;
-  font-style: normal !important;
-  font-weight: normal !important;
-  font-variant: normal !important;
-  text-transform: none !important;
-  speak: none;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale; }
+/* for error page */
+.icon-error:before {
+  content: '\E802'; }
 
-.socicon-periscope:before {
-  content: "\E00F"; }
+/* for links */
+.icon-linkedin:before {
+  content: '\F0E1'; }
 
-.socicon-vkontakte:before {
-  content: "\E01A"; }
+.icon-github:before {
+  content: '\F113'; }
 
-.socicon-mail:before {
-  content: "\E01F"; }
+.icon-telegram:before {
+  content: '\E804'; }
 
-.socicon-github:before {
-  content: "\E030"; }
+.icon-vkontakte:before {
+  content: '\F189'; }
 
-.socicon-linkedin:before {
-  content: "\E049"; }
+.icon-instagram:before {
+  content: '\F16D'; }
 
-.socicon-telegram:before {
-  content: "\E06E"; }
+/* for contacts */
+.icon-mail:before {
+  content: '\E809'; }
 
-.socicon-viber:before {
-  content: "\E071"; }
+.icon-location:before {
+  content: '\E808'; }
 
-.socicon-instagram:before {
-  content: "\E057"; }
+.icon-phone:before {
+  content: '\E80C'; }
 
 html {
   overflow: hidden; }
@@ -216,7 +210,7 @@ body {
       -ms-flex-align: center;
           align-items: center;
   position: relative;
-  top: 20vh;
+  top: 18.5vh;
   left: 140vh;
   height: 20vh;
   -webkit-animation: links 1.5s linear 0.8s, opacity 2s ease-out;
@@ -224,15 +218,12 @@ body {
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards; }
   .links a {
-    margin: 0 2vh 0 2vh;
-    font-size: 9vh;
+    margin: 0 .2vh 0 .2vh;
+    font-size: 11vh;
     text-decoration: none; }
-    .links a:hover {
-      cursor: pointer;
-      -webkit-animation: vzhuh 0.6s ease;
-              animation: vzhuh 0.6s ease;
-      -webkit-animation-iteration-count: 1;
-              animation-iteration-count: 1; }
+    .links a .icon-vkontakte:before {
+      margin-right: .3em;
+      margin-left: .1em; }
 
 @-webkit-keyframes links {
   from {
@@ -250,53 +241,14 @@ body {
     -webkit-transform: translate(-140vh, 0);
             transform: translate(-140vh, 0); } }
 
-@-webkit-keyframes vzhuh {
-  15% {
-    -webkit-transform: translateX(9px);
-            transform: translateX(9px); }
-  30% {
-    -webkit-transform: translateX(-9px);
-            transform: translateX(-9px); }
-  40% {
-    -webkit-transform: translateX(6px);
-            transform: translateX(6px); }
-  50% {
-    -webkit-transform: translateX(-6px);
-            transform: translateX(-6px); }
-  65% {
-    -webkit-transform: translateX(3px);
-            transform: translateX(3px); }
-  100% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0); } }
-
-@keyframes vzhuh {
-  15% {
-    -webkit-transform: translateX(9px);
-            transform: translateX(9px); }
-  30% {
-    -webkit-transform: translateX(-9px);
-            transform: translateX(-9px); }
-  40% {
-    -webkit-transform: translateX(6px);
-            transform: translateX(6px); }
-  50% {
-    -webkit-transform: translateX(-6px);
-            transform: translateX(-6px); }
-  65% {
-    -webkit-transform: translateX(3px);
-            transform: translateX(3px); }
-  100% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0); } }
-
-.socicon-linkedin {
+.icon-linkedin {
   position: relative;
   top: -1vh;
-  font-size: 11vh;
+  font-size: 13vh;
   color: #00a0dc; }
-  .socicon-linkedin:hover {
-    font-size: 15vh;
+  .icon-linkedin:hover {
+    font-size: 16vh;
+    transition: all .5s ease;
     -webkit-animation: 3s linkedin linear;
             animation: 3s linkedin linear;
     -webkit-animation-iteration-count: infinite;
@@ -326,10 +278,13 @@ body {
   100% {
     color: #e1306c; } }
 
-.socicon-github {
+.icon-github {
+  position: relative;
+  top: -.2vh;
   color: #6e5494; }
-  .socicon-github:hover {
-    font-size: 13vh;
+  .icon-github:hover {
+    font-size: 14vh;
+    transition: all .5s ease;
     -webkit-animation: 3s github linear;
             animation: 3s github linear;
     -webkit-animation-iteration-count: infinite;
@@ -359,10 +314,13 @@ body {
   100% {
     color: #00a0dc; } }
 
-.socicon-telegram {
-  color: #00FF33; }
-  .socicon-telegram:hover {
-    font-size: 13vh;
+.icon-telegram {
+  color: #00FF33;
+  position: relative;
+  top: .1vh; }
+  .icon-telegram:hover {
+    font-size: 14vh;
+    transition: all .5s ease;
     -webkit-animation: 3s telegram linear;
             animation: 3s telegram linear;
     -webkit-animation-iteration-count: infinite;
@@ -392,13 +350,14 @@ body {
   100% {
     color: #6e5494; } }
 
-.socicon-vkontakte {
+.icon-vkontakte {
   position: relative;
-  top: 1vh;
+  top: -.5vh;
   color: #ffff00;
   font-size: 12vh; }
-  .socicon-vkontakte:hover {
-    font-size: 18vh;
+  .icon-vkontakte:hover {
+    font-size: 15.5vh;
+    transition: all .5s ease;
     -webkit-animation: 3s vkontakte linear;
             animation: 3s vkontakte linear;
     -webkit-animation-iteration-count: infinite;
@@ -428,12 +387,12 @@ body {
   100% {
     color: #00FF33; } }
 
-.socicon-instagram {
+.icon-instagram {
   position: relative;
-  top: 0.3vh;
   color: #e1306c; }
-  .socicon-instagram:hover {
-    font-size: 13vh;
+  .icon-instagram:hover {
+    font-size: 14vh;
+    transition: all .5s ease;
     -webkit-animation: 3s instagram linear;
             animation: 3s instagram linear;
     -webkit-animation-iteration-count: infinite;
@@ -509,13 +468,19 @@ body {
       -webkit-box-align: start;
           -ms-flex-align: start;
               align-items: flex-start; }
-      .contacts a div p {
-        text-indent: 0.5vh; }
+      .contacts a div .icon-mail:before {
+        margin-right: .3em; }
+      .contacts a div .icon-location:before {
+        margin-right: .2em;
+        position: relative;
+        top: .1vh; }
+      .contacts a div .icon-phone:before {
+        font-size: 6.1vh;
+        position: relative;
+        top: .5vh;
+        margin-right: 0; }
     .contacts a p, .contacts a span {
       height: 6.5vh; }
-  .contacts span {
-    position: relative;
-    top: 0.9vh; }
 
 @-webkit-keyframes contacts {
   from {
