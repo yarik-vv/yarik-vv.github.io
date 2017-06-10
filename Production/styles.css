@@ -1,23 +1,23 @@
 @font-face {
-  src: url( fonts/Athiti.woff2) format("woff2"), url( fonts/Athiti.woff) format("woff");
+  src: url(/fonts/Athiti.woff2) format("woff2"), url(/fonts/Athiti.woff) format("woff");
   font-family: "Athiti";
   font-style: normal;
   font-weight: normal; }
 
 @font-face {
-  src: url( fonts/BubblerOne.woff2) format("woff2"), url( fonts/BubblerOne.woff) format("woff");
+  src: url(/fonts/BubblerOne.woff2) format("woff2"), url(/fonts/BubblerOne.woff) format("woff");
   font-family: "Bubbler One";
   font-style: normal;
   font-weight: normal; }
 
 @font-face {
-  src: url( fonts/Ubuntu.woff2) format("woff2"), url( fonts/Ubuntu.woff) format("woff");
+  src: url(/fonts/Ubuntu.woff2) format("woff2"), url(/fonts/Ubuntu.woff) format("woff");
   font-family: "Ubuntu";
   font-style: normal;
   font-weight: normal; }
 
 @font-face {
-  src: url( icons/icons.woff2) format("woff2"), url( icons/icons.woff) format("woff");
+  src: url(/icons/icons.woff2) format("woff2"), url(/icons/icons.woff) format("woff");
   font-family: "icons";
   font-style: normal;
   font-weight: normal; }
@@ -73,7 +73,7 @@ html {
   font-weight: 400; }
 
 body {
-  background: url( img/background.jpg) center fixed;
+  background: url(/img/background.jpg) center fixed;
   background-size: cover; }
 
 .main {

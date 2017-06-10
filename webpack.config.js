@@ -14,7 +14,7 @@ module.exports = {
 
    output: {
       path: __dirname + '/Production',
-      publicPath: ' ',
+      publicPath: '/',
       filename: 'build.js'
    },
 
@@ -91,6 +91,7 @@ module.exports = {
    devServer: {
       contentBase: __dirname + '/Production',
       port: 9000,
+      watchContentBase: true,
       compress: true,
       inline: true,
       hot: true
