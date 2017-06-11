@@ -82,6 +82,31 @@ module.exports = {
             preventAttributesEscaping: true
          }
       }),
+      new HtmlWebpackPlugin({
+         chunks: ['error'],
+         filename: '404.html',
+         template: '404.html',
+         minify: {
+            minifyCSS:true,
+            minifyJS:true,
+            useShortDoctype: true,
+            removeAttributeQuotes: true,
+            removeComments:true,
+            collapseWhitespace: true,
+            collapseInlineTagWhitespace: true,
+            collapseBooleanAttributes: true,
+            removeEmptyAttributes: true,
+            caseSensitive: true,
+            sortAttributes: true,
+            sortClassName: true,
+            removeScriptTypeAttributes: true,
+            removeStyleLinkTypeAttributes: true,
+            removeRedundantAttributes: true,
+            keepClosingSlash: true,
+            minifyURLs: true,
+            preventAttributesEscaping: true
+         }
+      }),
       new ExtractTextPlugin({
          filename:  'styles.css',
          allChunks: true
