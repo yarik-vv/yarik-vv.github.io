@@ -1,0 +1,35 @@
+.error {
+   height: 100vh;
+   font-family: $secondary-font;
+
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+
+   .icon-error {
+      font-size: 20vh;
+      margin-bottom: 3vh;
+   }
+
+   span {
+      font-size: 6vh;
+   }
+
+   a {
+      color: $secondary-color;
+      font-size: 5vh;
+      text-decoration: none;
+
+      border: 1px solid $secondary-color;
+      border-radius: 15px;
+
+      padding: 1vh 2vh 1vh 2vh;
+      margin: 5vh 0 0 0;
+
+      &:hover{
+         border-color: $primary-color;
+         color: $primary-color;
+      }
+   }
+}
