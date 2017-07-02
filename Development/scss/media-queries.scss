@@ -45,12 +45,6 @@
    .main {
       @include flex(flex-start, column, center);
    }
-   .name :nth-child(2) {
-      text-indent: 2vh;
-   }
-   .contacts a{
-      margin: 0;
-   }
 }
 
 @media (max-width: 770px) {
@@ -59,6 +53,7 @@
    }
    .links {
       top: 8vh;
+
       a{
          font-size: 10vh;
       }
@@ -73,11 +68,11 @@
       animation-fill-mode: forwards;
       
       a{
-         margin: 1vh;
+         margin: 1vh 0 1vh 0;
       }
    }
    @keyframes contacts {
-      @include primary-animation(0, 0, 150vh, 114vh);
+      @include primary-animation(0, 0, 150vh, 115vh);
    }
 }
 
@@ -97,15 +92,13 @@
          text-indent: 0;
       }
    }
-
    .develop {
       line-height: 4.5vh;
       font-size: 4.5vh;
       margin-top: 1vh;
    }
-
    .links {
-      top: -5vh;
+      top: -4vh;
       
       a {
          margin: 0vh;
@@ -130,8 +123,6 @@
    .icon-instagram:hover{
       font-size: 9vh;
    }
-
-
    @keyframes name {
       @include primary-animation(0, 0, 0, 26vh);
    }
@@ -141,15 +132,22 @@
 
       animation: contacts 2.4s ease-out, opacity 2.2s ease-out;
       animation-fill-mode: forwards;
+      
+      a{
+         margin: 1vh 0 1vh 0;
+      }
    }
-
    @keyframes contacts {
-      @include primary-animation(0, 0, 150vh, 100vh);
+      @include primary-animation(0, 0, 150vh, 103vh);
    }
 }
 
 @media (orientation: portrait) and (min-height: 770px) {
    .contacts {
       @include flex(flex-start, column, center);
+      
+      a {
+         margin: 1vh 0 1vh 0;
+      }
    }
 }
