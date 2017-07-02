@@ -1,7 +1,5 @@
 @import 'variables';
 @import 'mixins';
-@import 'fonts';
-@import 'icons';
 
 html {
    overflow: hidden;
@@ -18,8 +16,10 @@ body {
    background-size: cover;
 }
 
+@import 'icons';
+@import 'fonts';
 @import 'name-box';
-@import "links";
-@import "contacts";
-@import "media-queries"; 
+@import 'links';
+@import 'contacts';
+@import 'media-queries'; 
 @import 'error';
