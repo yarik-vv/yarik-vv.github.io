@@ -39,13 +39,13 @@ module.exports = {
       rules: [{
          test: /\.scss$/,
          include: __dirname + '/Development',
-         use: ExtractTextPlugin.extract({
+         use: ExtractTextPlugin.extract({ 
             fallback: 'style',
             use:['css', 'postcss', 'sass']
          })
       }, 
       {
-         test:   /\.(png|jpg|svg|ttf|eot|woff|woff2)$/,
+         test:   /\.(png|jpg|woff|woff2)$/,
          exclude: /(node_modules)/,
          loader: 'file-loader?name=[path][name].[ext]',
       }]
@@ -58,7 +58,6 @@ module.exports = {
       }),
       new CleanWebpackPlugin(__dirname + '/Production/*'),
       new HtmlWebpackPlugin({
-         chunks: ['index'],
          filename: 'index.html',
          template: 'index.html',
          minify: {
@@ -83,7 +82,6 @@ module.exports = {
          }
       }),
       new HtmlWebpackPlugin({
-         chunks: ['error'],
          filename: '404.html',
          template: '404.html',
          minify: {
@@ -114,8 +112,8 @@ module.exports = {
    ],
 
    devServer: {
-      contentBase: __dirname + '/Production',
       port: 9000,
+      contentBase: __dirname + '/Production',
       watchContentBase: true,
       compress: true,
       inline: true,
@@ -136,6 +134,7 @@ if (NODE_ENV == 'production') {
       }),
       new StyleExtHtmlWebpackPlugin('styles.css'),
       new webpack.optimize.UglifyJsPlugin({
+         exclude: /build.js/,
          beautify: false,
          mangle: {
             screw_ie8: true,
