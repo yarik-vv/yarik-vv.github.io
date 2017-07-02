@@ -29,10 +29,6 @@
    .icon-vkontakte:hover {
       font-size: 12vh;
    }
-   // .links {
-   //    left: 0;
-   //    animation: opacity 2s ease-out;
-   // }
 }
 
 @media (max-width: 1440px), (orientation: landscape) and (min-width: 1440px) {
@@ -44,32 +40,25 @@
 @media (max-width: 813px), (orientation: portrait) {
    .main {
       @include flex(flex-start, column, center);
-      //flex-direction: column;
-      //align-items: center;
    }
    .name :nth-child(2) {
       text-indent: 2vh;
    }
    .contacts a{
-      //margin-left: 2vh;
-      //margin-right: 2vh;
-      margin: 0 2vh 0 2vh;
+      margin: 0;
    }
 }
 
 @media (max-width: 770px) {
    @keyframes name {
       @include primary-animation(0, 0, 0, 30vh);
-      // to {
-      //    -webkit-transform: translate(0, 30vh);
-      //    -moz-transform: translate(0, 30vh);
-      //    -o-transform: translate(0, 30vh);
-      // }
    }
    .links {
       top: 8vh;
+      a{
+         font-size: 10vh;
+      }
    }
-
    .contacts {
       @include flex(flex-start, column, center);
 
@@ -83,15 +72,8 @@
          margin: 1vh;
       }
    }
-
-
    @keyframes contacts {
       @include primary-animation(0, 0, 150vh, 114vh);
-      // to {
-      //    -webkit-transform: translate(150vh, 114vh);
-      //    -moz-transform: translate(150vh, 114vh);
-      //    -o-transform: translate(150vh, 114vh);
-      // }
    }
 }
 
@@ -102,8 +84,6 @@
    }
    .name {
       @include flex(flex-start, column, center);
-      //flex-direction: column;
-      //align-items: center;
 
       font-size: 13vh;
       text-align: center;
@@ -112,15 +92,6 @@
       & :nth-child(2) {
          text-indent: 0;
       }
-   }
-
-   .socicon-github,
-   .socicon-telegram,
-   .socicon-instagram {
-      font-size: 8vh;
-   }
-   .socicon-linkedin {
-      font-size: 10vh;
    }
 
    .develop {
@@ -133,17 +104,32 @@
       top: -5vh;
       
       a {
-         margin: 1vh;
+         margin: 0vh;
+         font-size: 9vh;
+         
+         .icon-vkontakte:before { 
+            margin-right: .2em;
+            margin-left: 0em;
+         }
       }
    }
+   .icon-vkontakte,
+   .icon-vkontakte:hover {
+      font-size: 10vh;
+   }
+   .icon-linkedin,
+   .icon-linkedin:hover {
+      font-size: 11vh;
+   }
+   .icon-github:hover,
+   .icon-telegram:hover,
+   .icon-instagram:hover{
+      font-size: 9vh;
+   }
+
 
    @keyframes name {
       @include primary-animation(0, 0, 0, 26vh);
-      // to {
-      //    -webkit-transform: translate(0, 26vh);
-      //    -moz-transform: translate(0, 26vh);
-      //    -o-transform: translate(0, 26vh);
-      // }
    }
    .contacts {
       top: -112vh;
@@ -155,18 +141,11 @@
 
    @keyframes contacts {
       @include primary-animation(0, 0, 150vh, 100vh);
-      // to {
-      //    -webkit-transform: translate(150vh, 100vh);
-      //    -moz-transform: translate(150vh, 100vh);
-      //    -o-transform: translate(150vh, 100vh);
-      // }
    }
 }
 
 @media (orientation: portrait) and (min-height: 770px) {
    .contacts {
       @include flex(flex-start, column, center);
-      // flex-direction: column;
-      // align-items: center;
    }
 }
