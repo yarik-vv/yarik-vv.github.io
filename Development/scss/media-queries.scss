@@ -7,6 +7,10 @@
       65% {transform: translateX(3px);}
       100% {transform: translateX(0);}
    }
+   .links {
+      left:0;
+      animation: opacity 2s ease-out;
+   }
    .contacts a:hover {
       transform: none;
       color: $primary-color;
