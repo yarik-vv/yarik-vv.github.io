@@ -1,17 +1,18 @@
 {
   "name": "yarik-vv.info",
-  "version": "1.0.0",
-  "description": "homepage yarik-vv",
+  "version": "2.0.0",
+  "description": "Personal page front-end developer @yarik-vv, with contacts and main links",
   "main": "webpack.config.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "NODE_ENV=development webpack-dev-server",
+    "start":"NODE_ENV=production webpack"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/yarik-vv/yarik-vv.info.git"
   },
   "author": "Yarik Vashchuk",
-  "license": "ISC",
+  "license": "GPL-3.0",
   "bugs": {
     "url": "https://github.com/yarik-vv/yarik-vv.info/issues"
   },
