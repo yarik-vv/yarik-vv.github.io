@@ -4,8 +4,8 @@
   "description": "Personal page front-end developer @yarik-vv, with contacts and main links",
   "main": "webpack.config.js",
   "scripts": {
-    "test": "NODE_ENV=development webpack-dev-server",
-    "start":"NODE_ENV=production webpack"
+    "dev": "NODE_ENV=development webpack-dev-server",
+    "build":"NODE_ENV=production webpack"
   },
   "repository": {
     "type": "git",
