@@ -18,12 +18,6 @@ module.exports = {
       filename: 'build.js'
    },
 
-   watch: NODE_ENV == 'development',
-   watchOptions: {
-      aggregateTimeout: 100,
-      ignored: /node_modules/
-   },
-
    resolve: {
       modules: ['node_modules'],
       extensions: ['.js']
@@ -121,7 +115,7 @@ module.exports = {
    }
 };
 
-if (NODE_ENV == 'production') {
+if (NODE_ENV === 'production') {
    module.exports.plugins.push(
       new webpack.LoaderOptionsPlugin({
          minimize: true,
