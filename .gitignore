@@ -1,3 +1,4 @@
 /node_modules
+/Production
+/.idea
 .DS_Store
-/Production/build.js
